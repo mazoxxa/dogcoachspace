@@ -1,0 +1,989 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DOG Coach — Кинолог • Варшава</title>
+  <meta name="description" content="Кинолог в Варшаве. Дрессировка и воспитание собак, зоопсихология, коррекция поведения. Индивидуальные занятия, онлайн-консультации, курсы и клуб." />
+
+  <style>
+    :root{
+      --bg:#0b0f12;
+      --card:#0f151b;
+      --card2:#0c1116;
+      --text:#e9eef7;
+      --muted:#9aa8b8;
+      --line:rgba(255,255,255,.10);
+
+      --accent:#7c5cff;     /* фиолетовый */
+      --accent2:#2ee59d;    /* зелёный */
+      --gold:#d7b56d;       /* тёплый акцент */
+      --shadow:0 14px 40px rgba(0,0,0,.40);
+      --radius:18px;
+
+      --max:1100px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1100px 520px at 15% 5%, rgba(124,92,255,.22), transparent 60%),
+        radial-gradient(900px 520px at 85% 15%, rgba(46,229,157,.14), transparent 55%),
+        radial-gradient(900px 500px at 50% 95%, rgba(215,181,109,.12), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 80px}
+
+    /* NAV */
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(11,15,18,.78), rgba(11,15,18,.45));
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 240px;
+    }
+    .avatar{
+      width:34px;
+      height:34px;
+      border-radius:10px;
+      object-fit:cover;
+      border:1px solid rgba(255,255,255,.16);
+      box-shadow:0 8px 20px rgba(0,0,0,.35);
+      background:#111;
+      flex:0 0 auto;
+    }
+    .brand-title{
+      display:flex;
+      flex-direction:column;
+      line-height:1.15;
+      gap:2px;
+    }
+    .brand-title strong{font-size:14px; letter-spacing:.2px}
+    .brand-title span{font-size:12px; color:var(--muted)}
+    .links{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .links a{
+      padding:8px 10px;
+      border-radius:12px;
+      color:var(--muted);
+      border:1px solid transparent;
+    }
+    .links a:hover{
+      color:var(--text);
+      border-color: rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+    .cta{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex:0 0 auto;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      box-shadow: 0 10px 24px rgba(0,0,0,.24);
+      font-weight:600;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{background: rgba(255,255,255,.07)}
+    .btn-primary{
+      border-color: rgba(124,92,255,.45);
+      background: linear-gradient(135deg, rgba(124,92,255,.25), rgba(46,229,157,.12));
+    }
+    .btn-primary:hover{
+      border-color: rgba(124,92,255,.65);
+      background: linear-gradient(135deg, rgba(124,92,255,.32), rgba(46,229,157,.14));
+    }
+
+    /* HERO */
+    .hero{
+      padding:26px 0 6px;
+      display:grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr}
+      .brand{min-width: unset}
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-left{padding:18px}
+    .kicker{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      color:var(--muted);
+      font-size:13px;
+      margin-bottom:10px;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow:0 0 0 6px rgba(124,92,255,.12);
+    }
+    h1{
+      margin:0 0 10px;
+      font-size:34px;
+      line-height:1.12;
+      letter-spacing:-.4px;
+    }
+    .lead{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+      max-width: 62ch;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+
+    .hero-right{
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .mini{
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:16px;
+      padding:14px;
+    }
+    .mini strong{display:block; font-size:14px}
+    .mini span{display:block; color:var(--muted); font-size:13px; margin-top:4px}
+
+    /* SECTIONS */
+    section{scroll-margin-top: 86px}
+    .section-head{
+      margin-top:22px;
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size:20px;
+      letter-spacing:-.2px;
+    }
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      max-width: 60ch;
+    }
+
+    .grid{
+      margin-top:12px;
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
+    }
+    .col-8{grid-column: span 8}
+    .col-4{grid-column: span 4}
+    .col-6{grid-column: span 6}
+    .col-12{grid-column: span 12}
+    @media (max-width: 920px){
+      .col-8,.col-4,.col-6{grid-column: span 12}
+    }
+
+    .panel{padding:16px}
+    .panel h3{margin:0 0 8px; font-size:16px}
+    .panel p{margin:0; color:var(--muted)}
+    .list{
+      margin:10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:12px;
+      margin-right:8px;
+      margin-bottom:8px;
+    }
+    .pill b{color:var(--text); font-weight:700}
+
+    /* NEWS */
+    .news-card{
+      padding:14px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .news-card .meta{color:var(--muted); font-size:12px}
+    .news-card .title{font-weight:700}
+    .news-card a{
+      color: var(--text);
+      opacity:.92;
+      border-bottom:1px dashed rgba(255,255,255,.25);
+      width: fit-content;
+    }
+    .news-card a:hover{opacity:1}
+
+    /* SERVICES (accordion) */
+    .acc{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      border-radius:16px;
+      overflow:hidden;
+    }
+    details{
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+    details:first-child{border-top:none}
+    summary{
+      list-style:none;
+      cursor:pointer;
+      padding:14px 14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      user-select:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    .svc-left{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+      min-width: 0;
+    }
+    .num{
+      width:34px;
+      height:34px;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      color: rgba(255,255,255,.92);
+      background: linear-gradient(135deg, rgba(215,181,109,.28), rgba(124,92,255,.22));
+      border:1px solid rgba(255,255,255,.10);
+      flex:0 0 auto;
+    }
+    .svc-title{
+      display:flex;
+      flex-direction:column;
+      min-width:0;
+    }
+    .svc-title b{
+      font-size:14px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .svc-title span{font-size:12px; color:var(--muted); margin-top:2px}
+    .price{
+      font-weight:800;
+      color: rgba(255,255,255,.92);
+      white-space:nowrap;
+    }
+    .acc-body{
+      padding:0 14px 14px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .acc-body .cols{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top:10px;
+    }
+    @media (max-width: 720px){
+      .acc-body .cols{grid-template-columns:1fr}
+    }
+    .box{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      border-radius:14px;
+      padding:12px;
+    }
+    .box strong{display:block; margin-bottom:6px; color:var(--text)}
+    .box ul{margin:0; padding-left:18px}
+    .box li{margin:6px 0}
+
+    /* REVIEWS */
+    .review-link{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+    }
+    .review-link span{color:var(--muted); font-size:13px}
+    .review-link:hover{background: rgba(255,255,255,.05)}
+    .arrow{opacity:.8}
+
+    /* CONTACTS */
+    .contact-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:10px;
+    }
+    .contact-row a{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+    }
+    .contact-row a:hover{background: rgba(255,255,255,.06)}
+
+    footer{
+      margin-top:26px;
+      color: var(--muted);
+      font-size:12px;
+      text-align:center;
+      opacity:.9;
+    }
+    .hr{height:1px; background: rgba(255,255,255,.08); margin:18px 0}
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <!-- 1) Фото слева от DOG Coach: положи avatar.jpg рядом с index.html -->
+        <img class="avatar" src="1.jpg" alt="DOG Coach — фото" />
+        <div class="brand-title">
+          <strong>DOG Coach</strong>
+          <span>Кинолог • Варшава</span>
+        </div>
+      </div>
+
+      <!-- 2) Меню: Обо мне → Услуги → Отзывы → Контакты -->
+      <div class="links">
+        <a href="#about">Обо мне</a>
+        <a href="#services">Услуги</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+
+      <!-- 3) Instagram убираем. Оставляем "Записаться" → отдельная страница -->
+      <div class="cta">
+        <a class="btn btn-primary" href="book.html">Записаться</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- HERO (кратко, без огромного полотна) -->
+    <div class="hero card">
+      <div class="hero-left">
+        <div class="kicker"><span class="dot"></span><span>Индивидуальный подход • понятные объяснения • спокойная работа</span></div>
+        <h1>Дрессировка и коррекция поведения собак в Варшаве</h1>
+        <p class="lead">
+          Работаю с владельцами и собаками: команды, поводок, страхи, агрессия/реактивность, проблемы дома и на улице.
+          Цель — чтобы <b>вам было спокойно</b>, а собаке — <b>понятно</b>.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="book.html">Записаться</a>
+          <a class="btn" href="#services">Смотреть услуги</a>
+          <a class="btn" href="#reviews">Отзывы</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="mini">
+          <strong>Кто я</strong>
+          <span>Sergiusz Wieliczka — кинолог / зоопсихолог (Варшава)</span>
+        </div>
+        <div class="mini">
+          <strong>Где проходят занятия</strong>
+          <span>В парках / на улице, иногда дома — по ситуации</span>
+        </div>
+        <div class="mini">
+          <strong>Формат</strong>
+          <span>Оффлайн и онлайн, разовые консультации и курсы</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4) Дальше сайт идет по очереди: Обо мне → Услуги → Отзывы → Контакты -->
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-head">
+        <div>
+          <h2>Обо мне</h2>
+          <p>Коротко о подходе и о том, как мы будем работать.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card panel col-8">
+          <h3>Спокойно, системно и без “ломания”</h3>
+          <p>
+            Я помогаю выстроить понятные правила и коммуникацию между человеком и собакой.
+            Мы разбираем причины поведения, закрепляем правильные привычки и делаем так,
+            чтобы результаты сохранялись не на один день, а надолго.
+          </p>
+          <div class="hr"></div>
+          <div class="pill"><b>Фокус:</b> понимание собаки</div>
+          <div class="pill"><b>Работа:</b> шаги + практика</div>
+          <div class="pill"><b>Цель:</b> спокойная жизнь</div>
+
+          <ul class="list">
+            <li>Объясняю простыми словами, что делать и почему это работает.</li>
+            <li>Показываю на практике: как держать поводок, как давать команды, как реагировать на триггеры.</li>
+            <li>Даём “домашку” и корректируем по результату.</li>
+          </ul>
+        </div>
+
+        <div class="card panel col-4">
+          <h3>Кому подойдёт</h3>
+          <p>Если вам важно, чтобы было:</p>
+          <ul class="list">
+            <li>без крика и жести</li>
+            <li>понятный план</li>
+            <li>под вашу ситуацию</li>
+            <li>поддержка после занятий</li>
+          </ul>
+        </div>
+
+        <!-- Новости вместо видео -->
+        <div class="card panel col-12">
+          <h3>Актуальные новости</h3>
+          <p>Сюда добавляем свежие анонсы, акции, видео и ссылки на полезные материалы.</p>
+
+          <div class="grid" style="margin-top:12px;">
+            <div class="news-card col-6">
+              <div class="meta">Новость / видео</div>
+              <div class="title">Подкаст (YouTube) — гость выпуска</div>
+              <a href="https://www.youtube.com/watch?v=TYSTjGw9YRs" target="_blank" rel="noopener">Открыть видео</a>
+            </div>
+
+            <div class="news-card col-6">
+              <div class="meta">Анонс</div>
+              <div class="title">Корги-клуб 🐾 (Telegram)</div>
+              <a href="https://t.me/+xAQn5FJKOHgxNmQ0" target="_blank" rel="noopener">Перейти в группу</a>
+            </div>
+
+            <div class="news-card col-6">
+              <div class="meta">Акция / событие</div>
+              <div class="title">Тут будет ваш анонс №1</div>
+              <span style="color:var(--muted); font-size:13px;">Добавим ссылку / дату / короткое описание.</span>
+            </div>
+
+            <div class="news-card col-6">
+              <div class="meta">Полезное</div>
+              <div class="title">Тут будет ваш анонс №2</div>
+              <span style="color:var(--muted); font-size:13px;">Можно вести как “ленточку” новостей.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="section-head">
+        <div>
+          <h2>Услуги</h2>
+          <p>Ниже — расширенный список услуг (по твоим скринам). Можно потом легко поменять цены/текст.</p>
+        </div>
+      </div>
+
+      <div class="card panel">
+        <div class="acc">
+
+          <details open>
+            <summary>
+              <div class="svc-left">
+                <div class="num">01</div>
+                <div class="svc-title">
+                  <b>Обучение петситтеров</b>
+                  <span>Оффлайн курс • 8 встреч по 60 минут</span>
+                </div>
+              </div>
+              <div class="price">2 000 zł</div>
+            </summary>
+            <div class="acc-body">
+              Профессиональное петситтерство — это не “посидеть с собакой”, а навык безопасного и грамотного взаимодействия:
+              коммуникация с клиентом, помощь питомцу, коррекция поведения, безопасные прогулки, команды, игры, уход и поддержка.
+              <div class="cols">
+                <div class="box">
+                  <strong>Что входит</strong>
+                  <ul>
+                    <li>8 встреч по 60 минут</li>
+                    <li>Практика на групповых и индивидуальных занятиях</li>
+                    <li>Тестирование знаний и проверка ДЗ</li>
+                    <li>Онлайн-поддержка 6 месяцев</li>
+                  </ul>
+                </div>
+                <div class="box">
+                  <strong>Результат</strong>
+                  <ul>
+                    <li>уверенность в работе с собаками</li>
+                    <li>понимание поведения и рисков</li>
+                    <li>умение выстраивать доверие клиента</li>
+                  </ul>
+                </div>
+              </div>
+              <p style="margin-top:10px;"><b style="color:var(--gold)">Набор в группы:</b> укажем дату (сейчас в скрине “с 1 ноября”).</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <div class="svc-left">
+                <div class="num">02</div>
+                <div class="svc-title">
+                  <b>Курс для щенков до 1 года + сопровождение</b>
+                  <span>4 занятия • практика на улице и в ТЦ</span>
+                </div>
+              </div>
+              <div class="price">1 900 zł</div>
+            </summary>
+            <div class="acc-body">
+              Курс включает базовые знания и практику: поводок, социализация, знакомство с собаками, тренировка команд, навыки в городе.
+              <div class="cols">
+                <div class="box">
+                  <strong>Важные условия</strong>
+                  <ul>
+                    <li>перерыв между занятиями 7–10 дней</li>
+                    <li>занятия вт–сб</li>
+                    <li>обязательная обратная связь</li>
+                    <li>100% оплата на первом занятии</li>
+                    <li>каждое занятие минимум 90 минут</li>
+                  </ul>
+                </div>
+                <div class="box">
+                  <strong>Дополнительно</strong>
+                  <ul>
+                    <li>1 занятие в Корги-клубе (как в скрине)</li>
+                    <li>поддержка на протяжении жизни собаки (формат уточним)</li>
+                    <li>резюме и задания после встречи в течение 48 часов</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <div class="svc-left">
+                <div class="num">03</div>
+                <div class="svc-title">
+                  <b>Консультация + сопровождение</b>
+                  <span>Выезд к вам • дом/улица • поддержка после</span>
+                </div>
+              </div>
+              <div class="price">450 zł</div>
+            </summary>
+            <div class="acc-body">
+              Консультация и обучение владельцев, тренировка собаки, корректировка поведения, устранение агрессии или страхов.
+              <div class="cols">
+                <div class="box">
+                  <strong>Как проходит</strong>
+                  <ul>
+                    <li>выезд к вам</li>
+                    <li>занятие дома и/или на улице</li>
+                    <li>договариваемся о времени заранее</li>
+                    <li>итоги в чат в течение 48 часов</li>
+                  </ul>
+                </div>
+                <div class="box">
+                  <strong>Условия</strong>
+                  <ul>
+                    <li>предварительная запись</li>
+                    <li>предоплата 100 zł</li>
+                    <li>занятия вт–сб</li>
+                    <li>поддержка 7 дней</li>
+                    <li>выезд до 20 км в одну сторону включён</li>
+                  </ul>
+                </div>
+              </div>
+              <p style="margin-top:10px; color:var(--muted)">
+                Множество вопросов можно снять за одну встречу. Главное — системно продолжать работу, чтобы закрепить результат.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <div class="svc-left">
+                <div class="num">04</div>
+                <div class="svc-title">
+                  <b>Набор занятий (3–5–7–10)</b>
+                  <span>Без сопровождения • закрепляем результат</span>
+                </div>
+              </div>
+              <div class="price">от 450 zł</div>
+            </summary>
+            <div class="acc-body">
+              Первое занятие — формируем базу. Дальше закрепляем навыки, социализацию и тренируем команды.
+              <div class="cols">
+                <div class="box">
+                  <strong>Условия</strong>
+                  <ul>
+                    <li>первое занятие 120 минут</li>
+                    <li>последующие по 60 минут</li>
+                    <li>пакеты обсуждаем индивидуально</li>
+                    <li>выезд до 20 км включён</li>
+                  </ul>
+                </div>
+                <div class="box">
+                  <strong>Подходит для</strong>
+                  <ul>
+                    <li>поводок / команды / город</li>
+                    <li>социализация</li>
+                    <li>подготовка к выставке / экзамену (AirDog и т.п.)</li>
+                  </ul>
+                </div>
+              </div>
+              <p style="margin-top:10px; color:var(--muted)">
+                Точные цены по пакетам можно добавить отдельной таблицей — скажешь, и сделаю.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <div class="svc-left">
+                <div class="num">05</div>
+                <div class="svc-title">
+                  <b>Консультация онлайн</b>
+                  <span>Если вы в другом городе/стране</span>
+                </div>
+              </div>
+              <div class="price">300 zł</div>
+            </summary>
+            <div class="acc-body">
+              Онлайн-консультация помогает в большинстве случаев: разбор ситуации, план действий, корректировки.
+              <div class="cols">
+                <div class="box">
+                  <strong>Что нужно</strong>
+                  <ul>
+                    <li>телефон/камера</li>
+                    <li>наушники</li>
+                    <li>стабильный интернет</li>
+                  </ul>
+                </div>
+                <div class="box">
+                  <strong>Условия</strong>
+                  <ul>
+                    <li>предварительная запись</li>
+                    <li>предоплата 100 zł</li>
+                    <li>занятия вт–сб</li>
+                    <li>итоги в чат в течение 48 часов</li>
+                    <li>поддержка 7 дней</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <div class="svc-left">
+                <div class="num">06</div>
+                <div class="svc-title">
+                  <b>Корги-Клуб</b>
+                  <span>Группа/встречи • прогулки • команды • социализация</span>
+                </div>
+              </div>
+              <div class="price">по расписанию</div>
+            </summary>
+            <div class="acc-body">
+              Клуб начался с корги, но постепенно присоединились и другие породы. Формат: прогулка и команды, площадка и дрессировка, ночной клуб.
+              <div class="cols">
+                <div class="box">
+                  <strong>Форматы</strong>
+                  <ul>
+                    <li>прогулка и команды</li>
+                    <li>площадка и дрессировка</li>
+                    <li>ночной Корги-клуб</li>
+                  </ul>
+                </div>
+                <div class="box">
+                  <strong>Условия</strong>
+                  <ul>
+                    <li>предварительная регистрация</li>
+                    <li>оплата занятия</li>
+                    <li>перенос возможен 1 раз</li>
+                  </ul>
+                </div>
+              </div>
+              <p style="margin-top:10px;">
+                <a class="btn" href="https://t.me/+xAQn5FJKOHgxNmQ0" target="_blank" rel="noopener">Группа в Telegram ↗</a>
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <div class="svc-left">
+                <div class="num">07</div>
+                <div class="svc-title">
+                  <b>Подарок для ребёнка</b>
+                  <span>Обучение отношениям с собакой • безопасное общение</span>
+                </div>
+              </div>
+              <div class="price">350 zł</div>
+            </summary>
+            <div class="acc-body">
+              Объясняю ребёнку, как правильно выстраивать отношения с собакой и принимать решения. Показываю на примере одной или двух собак.
+              <div class="cols">
+                <div class="box">
+                  <strong>Что будет</strong>
+                  <ul>
+                    <li>понятные правила и границы</li>
+                    <li>безопасное общение</li>
+                    <li>уверенность ребёнка</li>
+                  </ul>
+                </div>
+                <div class="box">
+                  <strong>Детали</strong>
+                  <ul>
+                    <li>обсуждаем по телефону</li>
+                    <li>прогулка минимум 120 минут</li>
+                    <li>можно добавить фото с занятия</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <div class="svc-left">
+                <div class="num">08</div>
+                <div class="svc-title">
+                  <b>Интенсивы по командам</b>
+                  <span>Программа от 7 дней • ежедневные тренировки</span>
+                </div>
+              </div>
+              <div class="price">250 zł</div>
+            </summary>
+            <div class="acc-body">
+              Интенсив по выбранным командам (например: “ко мне”, “рядом”, “место и ждать” и др.). Работает как “вылет” — дисциплина и результат.
+              <div class="cols">
+                <div class="box">
+                  <strong>Условия</strong>
+                  <ul>
+                    <li>обратная связь</li>
+                    <li>если нет задания до 22:00 — “вылет”</li>
+                    <li>оплата не возвращается</li>
+                  </ul>
+                </div>
+                <div class="box">
+                  <strong>Примечание</strong>
+                  <ul>
+                    <li>отзывы можно вынести отдельным актуальным</li>
+                    <li>индивидуальные программы — по согласованию</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <div class="svc-left">
+                <div class="num">09</div>
+                <div class="svc-title">
+                  <b>Избавление от страха собак</b>
+                  <span>Проработка страха • спокойная адаптация</span>
+                </div>
+              </div>
+              <div class="price">по запросу</div>
+            </summary>
+            <div class="acc-body">
+              Договариваемся о встрече и (при необходимости) о породе собаки для безопасной проработки страха.
+              Пошагово объясняю, как всё будет проходить, и сопровождаю процесс.
+              <div class="box" style="margin-top:10px;">
+                <strong>Смысл</strong>
+                <div style="color:var(--muted)">
+                  Страх уходит — появляется уверенность. Работаем мягко, без давления, с безопасной экспозицией.
+                </div>
+              </div>
+            </div>
+          </details>
+
+        </div>
+
+        <div style="margin-top:12px; color:var(--muted); font-size:13px;">
+          ⚙️ Если хочешь — сделаю отдельную “страницу услуг” с кнопками и красивыми карточками (как Instagram-сторис), но сейчас это уже аккуратно и по делу.
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews">
+      <div class="section-head">
+        <div>
+          <h2>Отзывы</h2>
+          <p>Ссылки на отзывы в Google и на сторис/подборки с отзывами.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card panel col-6">
+          <h3>Google отзывы</h3>
+          <p>Открыть страницу с отзывами и рейтингом.</p>
+          <div style="margin-top:12px;">
+            <a class="review-link" target="_blank" rel="noopener"
+               href="https://www.google.ru/search?newwindow=1&q=%D0%9A%D0%B8%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3+%D0%92%D0%B0%D1%80%D1%88%D0%B0%D0%B2%D0%B0+BY/UA/EN/RU+DOG+Coach&ludocid=9452669729934052287&gsas=1&lsig=AB86z5XrG2rWcNXNa44AmL1ul0aR&kgs=317455c21ff464ba&shndl=-1&source=sh/x/kp/local/3&sei=xKxSaff_IZLPwPAPv8iYkAE">
+              <div>
+                <div style="font-weight:800;">Смотреть отзывы в Google</div>
+                <span>Откроется в новой вкладке</span>
+              </div>
+              <div class="arrow">↗</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="card panel col-6">
+          <h3>Отзывы в сторис</h3>
+          <p>Сюда добавим прямые ссылки на highlights/сторис с отзывами.</p>
+
+          <div style="margin-top:12px; display:flex; flex-direction:column; gap:10px;">
+            <!-- Поставь сюда реальные ссылки на highlights, когда у тебя будут -->
+            <a class="review-link" href="#" onclick="alert('Добавь сюда ссылку на сторис/актуальное с отзывами'); return false;">
+              <div>
+                <div style="font-weight:800;">Отзывы — подборка 1</div>
+                <span>Ссылка будет добавлена</span>
+              </div>
+              <div class="arrow">↗</div>
+            </a>
+
+            <a class="review-link" href="#" onclick="alert('Добавь сюда ссылку на сторис/актуальное с отзывами'); return false;">
+              <div>
+                <div style="font-weight:800;">Отзывы — подборка 2</div>
+                <span>Ссылка будет добавлена</span>
+              </div>
+              <div class="arrow">↗</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section id="contacts">
+      <div class="section-head">
+        <div>
+          <h2>Контакты</h2>
+          <p>Связь и быстрые кнопки. “Записаться” ведёт на отдельную страницу.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card panel col-8">
+          <h3>Как связаться</h3>
+          <p>Укажи удобные каналы (телефон / WhatsApp / Telegram / email) — я вставлю точно.</p>
+
+          <div class="contact-row">
+            <a href="book.html">🗓️ Записаться</a>
+            <a href="https://t.me/+xAQn5FJKOHgxNmQ0" target="_blank" rel="noopener">💬 Telegram (Корги-клуб) ↗</a>
+            <a href="https://www.youtube.com/watch?v=TYSTjGw9YRs" target="_blank" rel="noopener">🎙️ Подкаст (YouTube) ↗</a>
+          </div>
+
+          <div class="hr"></div>
+          <p style="color:var(--muted); font-size:13px; margin:0;">
+            📍 Варшава • занятия в парках/на улице. При необходимости — выезд к вам.
+          </p>
+        </div>
+
+        <div class="card panel col-4">
+          <h3>Быстрый старт</h3>
+          <p>Чтобы записаться быстрее, подготовьте:</p>
+          <ul class="list">
+            <li>возраст и породу собаки</li>
+            <li>главную проблему (1–2 фразы)</li>
+            <li>когда удобно по времени</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> DOG Coach • Варшава. Сделано как одностраничный сайт-визитка.
+    </footer>
+  </div>
+
+  <script>
+    // год в футере
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // плавный скролл по якорям
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const id = a.getAttribute('href');
+        if(!id || id === '#') return;
+        const el = document.querySelector(id);
+        if(!el) return;
+        e.preventDefault();
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+        history.replaceState(null, '', id);
+      });
+    });
+  </script>
+</body>
+</html>
