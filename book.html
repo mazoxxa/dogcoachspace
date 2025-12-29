@@ -3,56 +3,80 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Записаться — DOG Coach</title>
+  <title>Запись — DOG Coach</title>
   <style>
+    :root{
+      --bg:#0b0f12;
+      --text:#e9eef7;
+      --muted:#9aa8b8;
+      --line:rgba(255,255,255,.10);
+      --shadow:0 14px 40px rgba(0,0,0,.40);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      background:#0b0f12;
-      color:#e9eef7;
+      background: var(--bg);
+      color: var(--text);
       min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:20px;
+      display:grid;
+      place-items:center;
+      padding:18px;
     }
     .card{
-      max-width:780px;
-      width:100%;
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:18px;
+      width:min(820px, 100%);
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      box-shadow: var(--shadow);
       background: rgba(255,255,255,.04);
       padding:18px;
-      box-shadow: 0 18px 50px rgba(0,0,0,.45);
     }
-    h1{margin:0 0 10px; font-size:24px}
-    p{margin:0; color: rgba(255,255,255,.75); line-height:1.6}
-    .row{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+    h1{margin:0 0 8px; font-size:22px}
+    p{margin:0; color:var(--muted); line-height:1.6}
+    .row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
     a{
       display:inline-flex;
       align-items:center;
-      justify-content:center;
+      gap:10px;
       padding:10px 12px;
       border-radius:14px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
-      color:#e9eef7;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
       text-decoration:none;
-      font-weight:700;
     }
-    a:hover{background: rgba(255,255,255,.07)}
+    a:hover{background: rgba(255,255,255,.06)}
+    .strong{
+      margin-top:10px;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      color: var(--text);
+      font-weight:800;
+    }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>Записаться</h1>
-    <p><b>ТУТ БУДЕТ ССЫЛКА НА УДОБНУЮ ДЛЯ ТЕБЯ ФОРМУ ЗАПИСИ</b></p>
-    <p style="margin-top:10px;">
-      Например, сюда можно поставить Calendly/Google Form/Telegram-bot/сайт-форму и т.д.
-    </p>
+    <p>Страница-заглушка: позже сюда вставим удобную форму записи.</p>
+
+    <div class="strong">ТУТ БУДЕТ ССЫЛКА НА УДОБНУЮ ДЛЯ ТЕБЯ ФОРМУ ЗАПИСИ</div>
+
+    <p style="margin-top:12px">Пока можно написать напрямую:</p>
 
     <div class="row">
-      <a href="index.html">← На главную</a>
+      <a href="https://t.me/dogcoachspace" target="_blank" rel="noopener">💬 Telegram @dogcoachspace ↗</a>
+      <a href="https://www.instagram.com/dogcoach.space/" target="_blank" rel="noopener">📸 Instagram ↗</a>
+      <a href="https://maps.app.goo.gl/VBRTxQKNs8q8tcmn6?g_st=ipc" target="_blank" rel="noopener">📍 Google Maps ↗</a>
+      <a href="index.html">← Назад на сайт</a>
     </div>
   </div>
 </body>
