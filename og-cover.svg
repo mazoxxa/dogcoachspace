@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Кинолог Зоопсихолог Варшава</title>
+  <desc id="desc">Воспитание собаки через понимание, а не силу.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0D12"/>
+      <stop offset="70%" stop-color="#0A0B10"/>
+      <stop offset="100%" stop-color="#1D1410"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F08B1A"/>
+      <stop offset="100%" stop-color="#F3C84D"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1010" cy="100" r="280" fill="#E57310" opacity="0.08"/>
+  <circle cx="1120" cy="560" r="260" fill="#F2CB57" opacity="0.07"/>
+
+  <rect x="60" y="56" width="690" height="52" rx="26" fill="#111318" stroke="#2A2E36" stroke-width="2"/>
+  <text x="96" y="89" fill="#F2CB57" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="2">КИНОЛОГ • ЗООПСИХОЛОГ • ВАРШАВА</text>
+
+  <text x="60" y="230" fill="url(#accent)" font-family="Montserrat, Arial, sans-serif" font-size="104" font-weight="800">Воспитание</text>
+  <text x="60" y="340" fill="url(#accent)" font-family="Montserrat, Arial, sans-serif" font-size="104" font-weight="800">собаки через</text>
+  <text x="60" y="450" fill="url(#accent)" font-family="Montserrat, Arial, sans-serif" font-size="104" font-weight="800">понимание,</text>
+  <text x="60" y="560" fill="#F2F2F2" font-family="Montserrat, Arial, sans-serif" font-size="104" font-weight="800">а не силу.</text>
+</svg>
