@@ -96,17 +96,19 @@
     }
     .lang-switcher {
       position: relative;
+      display: inline-block;
     }
     .lang-menu {
       display: none;
       position: absolute;
-      top: calc(100% + 0.4rem);
-      right: 0;
+      top: calc(100% + 0.35rem);
+      left: 0;
       background: #1A1A1A;
       border: 1px solid #333333;
       border-radius: 0.9rem;
       padding: 0.35rem;
-      min-width: 106px;
+      width: 100%;
+      min-width: 0;
       z-index: 80;
       box-shadow: 0 12px 22px rgba(0, 0, 0, 0.35);
     }
@@ -122,14 +124,19 @@
       box-shadow: 0 0 12px rgba(229, 115, 16, 0.35);
       transform: translateY(-1px);
     }
+    #lang-toggle,
+    .lang-option {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
     @media (max-width: 640px) {
       .lang-btn {
         min-width: 38px;
         padding: 0.35rem 0.45rem;
         font-size: 0.62rem;
-      }
-      .lang-menu {
-        min-width: 94px;
       }
     }
     @keyframes pulse-fab {
@@ -141,6 +148,65 @@
     *:focus-visible {
       outline: 2px solid #E57310;
       outline-offset: 2px;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #121212;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #333333;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #E57310;
+    }
+    #about article,
+    #services article,
+    #reviews article {
+      transition: all 300ms ease-out;
+      height: 100%;
+    }
+    #about article:hover,
+    #services article:hover,
+    #reviews article:hover {
+      transform: translateY(-0.5rem);
+      border-color: #E57310;
+      box-shadow: 0 0 20px rgba(229, 115, 16, 0.15);
+    }
+    #services .btn-spa-contacts,
+    #services .corgi-feature a {
+      transition: all 300ms ease-out;
+    }
+    #services .btn-spa-contacts:hover,
+    #services .corgi-feature a:hover {
+      transform: translateY(-2px) scale(1.02);
+      filter: brightness(1.05);
+    }
+    #reviews a.group .absolute {
+      transition: opacity 300ms ease-out;
+    }
+    #reviews a.group .relative {
+      transition: background-color 300ms ease-out, color 300ms ease-out;
+    }
+    #reviews a.group:hover .absolute {
+      opacity: 1;
+    }
+    #reviews a.group:hover .relative {
+      background: transparent;
+    }
+    #reviews a.group .font-semibold {
+      transition: color 300ms ease-out;
+    }
+    #reviews a.group:hover .font-semibold {
+      color: #121212;
+    }
+    #page-contacts a {
+      transition: all 300ms ease-out;
+    }
+    #page-contacts a:hover {
+      transform: translateY(-2px);
     }
   </style>
 </head>
