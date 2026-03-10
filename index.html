@@ -147,10 +147,10 @@
                 <button class="lang-trigger flex items-center gap-2 px-2.5 py-1.5 rounded-full border border-brand-border bg-transparent hover:text-white transition-colors duration-300 ease-out">
                     <span class="lang-trigger-text">🇷🇺 RU</span>
                 </button>
-                <div class="lang-menu absolute left-0 mt-2 w-full bg-brand-card border border-brand-border rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.35)] hidden opacity-0 scale-95 transition-all duration-200 ease-out z-50">
-                    <button class="lang-switch w-full text-left px-4 py-2 hover:text-white transition-colors duration-200" data-lang="ru">🇷🇺 RU</button>
-                    <button class="lang-switch w-full text-left px-4 py-2 hover:text-white transition-colors duration-200" data-lang="pl">🇵🇱 PL</button>
-                    <button class="lang-switch w-full text-left px-4 py-2 hover:text-white transition-colors duration-200" data-lang="en">🇬🇧 EN</button>
+                <div class="lang-menu absolute right-0 mt-2 min-w-[120px] bg-brand-card border border-brand-border rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.35)] hidden opacity-0 scale-95 transition-all duration-200 ease-out z-50">
+                    <button class="lang-switch w-full text-left px-4 py-2 hover:text-white transition-colors duration-200 flex items-center gap-2 whitespace-nowrap" data-lang="ru">🇷🇺 RU</button>
+                    <button class="lang-switch w-full text-left px-4 py-2 hover:text-white transition-colors duration-200 flex items-center gap-2 whitespace-nowrap" data-lang="pl">🇵🇱 PL</button>
+                    <button class="lang-switch w-full text-left px-4 py-2 hover:text-white transition-colors duration-200 flex items-center gap-2 whitespace-nowrap" data-lang="en">🇬🇧 EN</button>
                 </div>
             </div>
 
@@ -1459,7 +1459,6 @@
                     e.preventDefault();
                     const lang = btn.getAttribute('data-lang');
                     setLanguage(lang);
-                    closeMobileMenu();
                 });
             });
 
