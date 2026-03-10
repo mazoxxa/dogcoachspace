@@ -147,10 +147,10 @@
                 <button class="lang-trigger flex items-center gap-2 px-2.5 py-1.5 rounded-full border border-brand-border bg-transparent hover:text-white transition-colors duration-300 ease-out">
                     <span class="lang-trigger-text">🇷🇺 RU</span>
                 </button>
-                <div class="lang-menu absolute right-0 mt-2 min-w-[120px] bg-brand-card border border-brand-border rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.35)] hidden opacity-0 scale-95 transition-all duration-200 ease-out z-50">
-                    <button class="lang-switch w-full text-left px-4 py-2 hover:text-white transition-colors duration-200 flex items-center gap-2 whitespace-nowrap" data-lang="ru">🇷🇺 RU</button>
-                    <button class="lang-switch w-full text-left px-4 py-2 hover:text-white transition-colors duration-200 flex items-center gap-2 whitespace-nowrap" data-lang="pl">🇵🇱 PL</button>
-                    <button class="lang-switch w-full text-left px-4 py-2 hover:text-white transition-colors duration-200 flex items-center gap-2 whitespace-nowrap" data-lang="en">🇬🇧 EN</button>
+                <div class="lang-menu absolute right-0 mt-2 min-w-[140px] bg-brand-card border border-brand-border rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.35)] hidden opacity-0 scale-95 transition-all duration-200 ease-out z-50 p-2 flex flex-col gap-2">
+                    <button class="lang-switch text-left px-3 py-2 rounded-full border border-brand-border bg-transparent hover:text-white transition-colors duration-200 flex items-center gap-2 whitespace-nowrap" data-lang="ru">🇷🇺 RU</button>
+                    <button class="lang-switch text-left px-3 py-2 rounded-full border border-brand-border bg-transparent hover:text-white transition-colors duration-200 flex items-center gap-2 whitespace-nowrap" data-lang="pl">🇵🇱 PL</button>
+                    <button class="lang-switch text-left px-3 py-2 rounded-full border border-brand-border bg-transparent hover:text-white transition-colors duration-200 flex items-center gap-2 whitespace-nowrap" data-lang="en">🇬🇧 EN</button>
                 </div>
             </div>
 
@@ -1437,19 +1437,61 @@
 
             const langTrigger = document.querySelector('.lang-trigger');
             const langMenu = document.querySelector('.lang-menu');
+            let langMenuOpen = false;
+
+            const distanceToRect = (x, y, rect) => {
+                const dx = Math.max(rect.left - x, 0, x - rect.right);
+                const dy = Math.max(rect.top - y, 0, y - rect.bottom);
+                return Math.hypot(dx, dy);
+            };
+
+            const handleLangPointerMove = (e) => {
+                if (!langMenuOpen || !langMenu || !langTrigger) return;
+                const menuRect = langMenu.getBoundingClientRect();
+                const triggerRect = langTrigger.getBoundingClientRect();
+                const distMenu = distanceToRect(e.clientX, e.clientY, menuRect);
+                const distTrigger = distanceToRect(e.clientX, e.clientY, triggerRect);
+                if (distMenu > 80 && distTrigger > 80) {
+                    closeLangMenu();
+                }
+            };
+
+            const handleLangOutsideClick = (e) => {
+                if (!langMenuOpen || !langMenu || !langTrigger) return;
+                if (!langMenu.contains(e.target) && !langTrigger.contains(e.target)) {
+                    closeLangMenu();
+                }
+            };
+
+            const openLangMenu = () => {
+                if (!langMenu || langMenuOpen) return;
+                langMenuOpen = true;
+                langMenu.classList.remove('hidden');
+                requestAnimationFrame(() => {
+                    langMenu.classList.remove('opacity-0', 'scale-95');
+                });
+                document.addEventListener('pointermove', handleLangPointerMove);
+                document.addEventListener('click', handleLangOutsideClick);
+            };
+
+            const closeLangMenu = () => {
+                if (!langMenu || !langMenuOpen) return;
+                langMenuOpen = false;
+                langMenu.classList.add('opacity-0', 'scale-95');
+                setTimeout(() => {
+                    langMenu.classList.add('hidden');
+                }, 200);
+                document.removeEventListener('pointermove', handleLangPointerMove);
+                document.removeEventListener('click', handleLangOutsideClick);
+            };
+
             if (langTrigger && langMenu) {
                 langTrigger.addEventListener('click', (e) => {
                     e.preventDefault();
-                    if (langMenu.classList.contains('hidden')) {
-                        langMenu.classList.remove('hidden');
-                        requestAnimationFrame(() => {
-                            langMenu.classList.remove('opacity-0', 'scale-95');
-                        });
+                    if (langMenuOpen) {
+                        closeLangMenu();
                     } else {
-                        langMenu.classList.add('opacity-0', 'scale-95');
-                        setTimeout(() => {
-                            langMenu.classList.add('hidden');
-                        }, 200);
+                        openLangMenu();
                     }
                 });
             }
@@ -1459,6 +1501,7 @@
                     e.preventDefault();
                     const lang = btn.getAttribute('data-lang');
                     setLanguage(lang);
+                    closeLangMenu();
                 });
             });
 
