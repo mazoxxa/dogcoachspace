@@ -132,18 +132,24 @@
 
     <nav class="fixed top-0 left-0 w-full z-50 bg-[#121212]/80 backdrop-blur-md border-b border-brand-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="text-2xl font-semibold tracking-wider text-white select-none btn-nav-home">
+            <a href="#" class="text-2xl font-semibold tracking-wider text-white select-none btn-nav-home" data-i18n="nav_brand">
                 DOG<span class="text-gradient">COACH</span>
             </a>
             
             <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-brand-muted">
-                <a href="#philosophy" class="hover:text-white transition-colors duration-300 ease-out btn-nav-link">Мой подход</a>
-                <a href="#about" class="hover:text-white transition-colors duration-300 ease-out btn-nav-link">Обо мне</a>
-                <a href="#services" class="hover:text-white transition-colors duration-300 ease-out btn-nav-link">Услуги</a>
-                <a href="#reviews" class="hover:text-white transition-colors duration-300 ease-out btn-nav-link">Отзывы</a>
+                <a href="#philosophy" class="hover:text-white transition-colors duration-300 ease-out btn-nav-link" data-i18n="nav_philosophy">Мой подход</a>
+                <a href="#about" class="hover:text-white transition-colors duration-300 ease-out btn-nav-link" data-i18n="nav_about">Обо мне</a>
+                <a href="#services" class="hover:text-white transition-colors duration-300 ease-out btn-nav-link" data-i18n="nav_services">Услуги</a>
+                <a href="#reviews" class="hover:text-white transition-colors duration-300 ease-out btn-nav-link" data-i18n="nav_reviews">Отзывы</a>
             </div>
 
-            <button class="btn-spa-contacts bg-gradient-brand text-[#121212] font-semibold px-6 py-2.5 rounded-full hover:shadow-[0_0_15px_rgba(229,115,16,0.4)] hover:scale-105 transition-all duration-300 ease-out">
+            <div class="flex items-center gap-3 text-xs font-semibold text-brand-muted">
+                <button class="lang-switch hover:text-white transition-colors duration-300 ease-out" data-lang="ru">🇷🇺 RU</button>
+                <button class="lang-switch hover:text-[#E57310] transition-colors duration-300 ease-out" data-lang="pl">🇵🇱 PL</button>
+                <button class="lang-switch hover:text-[#E57310] transition-colors duration-300 ease-out" data-lang="en">🇺🇸 EN</button>
+            </div>
+
+            <button class="btn-spa-contacts bg-gradient-brand text-[#121212] font-semibold px-6 py-2.5 rounded-full hover:shadow-[0_0_15px_rgba(229,115,16,0.4)] hover:scale-105 transition-all duration-300 ease-out" data-i18n="nav_cta">
                 Записаться
             </button>
         </div>
@@ -164,29 +170,29 @@
                 
                 <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 py-12">
                     <div class="flex flex-col items-start gap-6">
-                        <div class="px-4 py-1.5 rounded-full border border-brand-border bg-brand-card text-brand-yellow text-xs font-semibold tracking-widest uppercase">
+                        <div class="px-4 py-1.5 rounded-full border border-brand-border bg-brand-card text-brand-yellow text-xs font-semibold tracking-widest uppercase" data-i18n="hero_badge">
                             Киноголог • Зоопсихолог • Варшава
                         </div>
-                        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight text-white">
+                        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight text-white" data-i18n="hero_title">
                             <span class="text-gradient">Воспитание собаки через понимание,</span> <br>
                             а не силу.
                         </h1>
-                        <p class="text-lg text-brand-muted max-w-lg leading-relaxed font-normal">
+                        <p class="text-lg text-brand-muted max-w-lg leading-relaxed font-normal" data-i18n="hero_desc">
                             На практике показываю владельцам собак, как выстроить отношения с питомцем, как скорректировать поведение и научить командам, чтоб двигаться к усложнениям в командах. 
 Оказываю поддержку для закрепления результатов.
                         </p>
                         <div class="flex flex-wrap items-center gap-4 mt-4">
-                            <button class="btn-spa-contacts px-8 py-4 bg-gradient-brand text-[#121212] font-semibold rounded-2xl hover:shadow-[0_0_20px_rgba(229,115,16,0.3)] hover:-translate-y-1 transition-all duration-300 ease-out">
+                            <button class="btn-spa-contacts px-8 py-4 bg-gradient-brand text-[#121212] font-semibold rounded-2xl hover:shadow-[0_0_20px_rgba(229,115,16,0.3)] hover:-translate-y-1 transition-all duration-300 ease-out" data-i18n="hero_cta_primary">
                                 Оставить заявку
                             </button>
-                            <a href="#services" class="px-8 py-4 bg-brand-card border border-brand-border text-white font-semibold rounded-2xl hover:border-brand-orange hover:bg-[#222222] transition-colors duration-300 ease-out">
+                            <a href="#services" class="px-8 py-4 bg-brand-card border border-brand-border text-white font-semibold rounded-2xl hover:border-brand-orange hover:bg-[#222222] transition-colors duration-300 ease-out" data-i18n="hero_cta_secondary">
                                 Смотреть услуги
                             </a>
                         </div>
                     </div>
                     
                     <div class="w-full h-[500px] lg:h-[650px] rounded-3xl overflow-hidden border border-brand-border relative shadow-2xl">
-                        <img src="hero.jpg" alt="Dog Coach" class="w-full h-full object-cover absolute inset-0">
+                        <img src="hero.jpg" alt="Dog Coach" class="w-full h-full object-cover absolute inset-0" data-i18n="hero_image_alt" data-i18n-attr="alt">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-80"></div>
                     </div>
                 </div>
@@ -196,11 +202,11 @@
                 <div class="max-w-7xl mx-auto w-full flex flex-col items-center">
                     
                     <div class="text-center mb-16 flex flex-col items-center">
-                        <span class="text-brand-orange font-semibold text-sm uppercase tracking-widest mb-3">Мой подход</span>
-                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 max-w-4xl text-center leading-tight">
+                        <span class="text-brand-orange font-semibold text-sm uppercase tracking-widest mb-3" data-i18n="philosophy_tag">Мой подход</span>
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 max-w-4xl text-center leading-tight" data-i18n="philosophy_title">
                             "НЕ НАУЧИЛ — <span class="text-gradient">НЕ ТРЕБУЙ</span>"
                         </h2>
-                        <p class="text-brand-muted text-lg max-w-3xl text-center font-normal">
+                        <p class="text-brand-muted text-lg max-w-3xl text-center font-normal" data-i18n="philosophy_desc">
                             Главный принцип, который повторяю всегда и придерживаюсь его в жизни. Понимая его, не будет раздражения, злости и разочарований при взаимодействии с питомцем.
                         </p>
                     </div>
@@ -211,8 +217,8 @@
                             <div class="w-12 h-12 rounded-xl bg-[#222222] border border-[#333333] flex items-center justify-center mb-6 group-hover:bg-brand-orange/10 group-hover:border-brand-orange/30 transition-colors duration-300">
                                 <svg class="w-6 h-6 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                             </div>
-                            <h3 class="text-xl font-semibold text-white mb-3">ОБУЧЕНИЕ</h3>
-                            <p class="text-brand-muted text-sm font-normal leading-relaxed">
+                            <h3 class="text-xl font-semibold text-white mb-3" data-i18n="philosophy_card1_title">ОБУЧЕНИЕ</h3>
+                            <p class="text-brand-muted text-sm font-normal leading-relaxed" data-i18n="philosophy_card1_desc">
                                 Научить можно только примером. В первую очередь учу владельца питомца. Нужно быть готовым учиться и меняться самому.
                             </p>
                         </div>
@@ -221,8 +227,8 @@
                             <div class="w-12 h-12 rounded-xl bg-[#222222] border border-[#333333] flex items-center justify-center mb-6 group-hover:bg-brand-orange/10 group-hover:border-brand-orange/30 transition-colors duration-300">
                                 <svg class="w-6 h-6 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                             </div>
-                            <h3 class="text-xl font-semibold text-white mb-3">ВНИМАНИЕ</h3>
-                            <p class="text-brand-muted text-sm font-normal leading-relaxed">
+                            <h3 class="text-xl font-semibold text-white mb-3" data-i18n="philosophy_card2_title">ВНИМАНИЕ</h3>
+                            <p class="text-brand-muted text-sm font-normal leading-relaxed" data-i18n="philosophy_card2_desc">
                                 Особое внимание к деталям и причинам. Именно они играют самую важную роль в правильной корректировке поведения.
                             </p>
                         </div>
@@ -231,8 +237,8 @@
                             <div class="w-12 h-12 rounded-xl bg-[#222222] border border-[#333333] flex items-center justify-center mb-6 group-hover:bg-brand-orange/10 group-hover:border-brand-orange/30 transition-colors duration-300">
                                 <svg class="w-6 h-6 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                             </div>
-                            <h3 class="text-xl font-semibold text-white mb-3">СПОКОЙСТВИЕ</h3>
-                            <p class="text-brand-muted text-sm font-normal leading-relaxed">
+                            <h3 class="text-xl font-semibold text-white mb-3" data-i18n="philosophy_card3_title">СПОКОЙСТВИЕ</h3>
+                            <p class="text-brand-muted text-sm font-normal leading-relaxed" data-i18n="philosophy_card3_desc">
                                 Чтобы добиться результата, нужна система, которой делюсь с вами, последовательность в действиях и дисциплина от самого себя.
                             </p>
                         </div>
@@ -241,8 +247,8 @@
                             <div class="w-12 h-12 rounded-xl bg-[#222222] border border-[#333333] flex items-center justify-center mb-6 group-hover:bg-brand-orange/10 group-hover:border-brand-orange/30 transition-colors duration-300">
                                 <svg class="w-6 h-6 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                             </div>
-                            <h3 class="text-xl font-semibold text-white mb-3">ЛЮБОВЬ И ВЕРА</h3>
-                            <p class="text-brand-muted text-sm font-normal leading-relaxed">
+                            <h3 class="text-xl font-semibold text-white mb-3" data-i18n="philosophy_card4_title">ЛЮБОВЬ И ВЕРА</h3>
+                            <p class="text-brand-muted text-sm font-normal leading-relaxed" data-i18n="philosophy_card4_desc">
                                 Верю в то, что делаю и добиваюсь результата. Верю в ваших питомцев и занимаюсь любимым делом.
                             </p>
                         </div>
@@ -255,92 +261,92 @@
                 <div class="max-w-7xl mx-auto w-full">
                     
                     <div class="text-center mb-16 flex flex-col items-center">
-                        <span class="text-brand-orange font-semibold text-sm uppercase tracking-widest mb-3">Обо мне</span>
-                        <h2 class="text-3xl sm:text-4xl font-semibold text-white">
+                        <span class="text-brand-orange font-semibold text-sm uppercase tracking-widest mb-3" data-i18n="about_tag">Обо мне</span>
+                        <h2 class="text-3xl sm:text-4xl font-semibold text-white" data-i18n="about_title">
                             Инженер, Дипломат, <span class="text-gradient">Кинолог</span>
                         </h2>
                     </div>
 
                     <div class="mb-16">
-                        <h3 class="text-2xl font-semibold text-white mb-8 border-l-4 border-brand-orange pl-4">Мой путь в кинологии</h3>
+                        <h3 class="text-2xl font-semibold text-white mb-8 border-l-4 border-brand-orange pl-4" data-i18n="about_path_title">Мой путь в кинологии</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             
                             <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex items-start gap-4 transition-colors duration-300 hover:border-brand-yellow">
                                 <svg class="w-8 h-8 text-brand-orange shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 <div>
-                                    <h4 class="font-semibold text-white mb-2">Начало пути</h4>
-                                    <p class="text-sm text-brand-muted font-normal">С 5 лет увлекался воспитанием и дрессировкой собак. Это стало страстью всей жизни.</p>
+                                    <h4 class="font-semibold text-white mb-2" data-i18n="about_path_card1_title">Начало пути</h4>
+                                    <p class="text-sm text-brand-muted font-normal" data-i18n="about_path_card1_desc">С 5 лет увлекался воспитанием и дрессировкой собак. Это стало страстью всей жизни.</p>
                                 </div>
                             </div>
 
                             <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex items-start gap-4 transition-colors duration-300 hover:border-brand-yellow">
                                 <svg class="w-8 h-8 text-brand-orange shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                 <div>
-                                    <h4 class="font-semibold text-white mb-2">Профессиональная база</h4>
-                                    <p class="text-sm text-brand-muted font-normal">Больше 5 лет активно занимался с профессиональным кинологом Капустиной Натальей Валентиновной.</p>
+                                    <h4 class="font-semibold text-white mb-2" data-i18n="about_path_card2_title">Профессиональная база</h4>
+                                    <p class="text-sm text-brand-muted font-normal" data-i18n="about_path_card2_desc">Больше 5 лет активно занимался с профессиональным кинологом Капустиной Натальей Валентиновной.</p>
                                 </div>
                             </div>
 
                             <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex items-start gap-4 transition-colors duration-300 hover:border-brand-yellow">
                                 <svg class="w-8 h-8 text-brand-orange shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
                                 <div>
-                                    <h4 class="font-semibold text-white mb-2">Выставки и клубы</h4>
-                                    <p class="text-sm text-brand-muted font-normal">Участие в выставке 1998 года. Состоял в Белорусском кинологическом объединении «Альба Росс», готовил собак к соревнованиям.</p>
+                                    <h4 class="font-semibold text-white mb-2" data-i18n="about_path_card3_title">Выставки и клубы</h4>
+                                    <p class="text-sm text-brand-muted font-normal" data-i18n="about_path_card3_desc">Участие в выставке 1998 года. Состоял в Белорусском кинологическом объединении «Альба Росс», готовил собак к соревнованиям.</p>
                                 </div>
                             </div>
 
                             <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex items-start gap-4 transition-colors duration-300 hover:border-brand-yellow">
                                 <svg class="w-8 h-8 text-brand-orange shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15"></path></svg>
                                 <div>
-                                    <h4 class="font-semibold text-white mb-2">Школа А. Наджаряна</h4>
-                                    <p class="text-sm text-brand-muted font-normal">Прошел глубокое обучение в школе знаменитого специалиста по поведению собак Антуана Наджаряна.</p>
+                                    <h4 class="font-semibold text-white mb-2" data-i18n="about_path_card4_title">Школа А. Наджаряна</h4>
+                                    <p class="text-sm text-brand-muted font-normal" data-i18n="about_path_card4_desc">Прошел глубокое обучение в школе знаменитого специалиста по поведению собак Антуана Наджаряна.</p>
                                 </div>
                             </div>
 
                             <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex items-start gap-4 transition-colors duration-300 hover:border-brand-yellow">
                                 <svg class="w-8 h-8 text-brand-orange shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 <div>
-                                    <h4 class="font-semibold text-white mb-2">Служебное собаководство</h4>
-                                    <p class="text-sm text-brand-muted font-normal">Успешно закончил обучение в Национальной Школе Служебного Собаководства Украины.</p>
+                                    <h4 class="font-semibold text-white mb-2" data-i18n="about_path_card5_title">Служебное собаководство</h4>
+                                    <p class="text-sm text-brand-muted font-normal" data-i18n="about_path_card5_desc">Успешно закончил обучение в Национальной Школе Служебного Собаководства Украины.</p>
                                 </div>
                             </div>
 
                             <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex items-start gap-4 transition-colors duration-300 hover:border-brand-yellow">
                                 <svg class="w-8 h-8 text-brand-orange shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                                 <div>
-                                    <h4 class="font-semibold text-white mb-2">Практика в Варшаве</h4>
-                                    <p class="text-sm text-brand-muted font-normal">Официально работаю в Варшаве с 2023 года. Решаю проблемы с агрессией, тревожностью и сложными случаями.</p>
+                                    <h4 class="font-semibold text-white mb-2" data-i18n="about_path_card6_title">Практика в Варшаве</h4>
+                                    <p class="text-sm text-brand-muted font-normal" data-i18n="about_path_card6_desc">Официально работаю в Варшаве с 2023 года. Решаю проблемы с агрессией, тревожностью и сложными случаями.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div>
-                        <h3 class="text-2xl font-semibold text-white mb-8 border-l-4 border-[#F2CB57] pl-4">Образование и Управление</h3>
+                        <h3 class="text-2xl font-semibold text-white mb-8 border-l-4 border-[#F2CB57] pl-4" data-i18n="about_edu_title">Образование и Управление</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             
                             <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col items-start transition-colors duration-300 hover:border-[#F2CB57]">
                                 <svg class="w-6 h-6 text-[#F2CB57] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                                <h4 class="font-semibold text-white mb-2">Инженерия & Экономика</h4>
-                                <p class="text-sm text-brand-muted font-normal">Получил высшее техническое (инженерное) образование. Закончил магистратуру по специальности «Мировая Экономика».</p>
+                                <h4 class="font-semibold text-white mb-2" data-i18n="about_edu_card1_title">Инженерия & Экономика</h4>
+                                <p class="text-sm text-brand-muted font-normal" data-i18n="about_edu_card1_desc">Получил высшее техническое (инженерное) образование. Закончил магистратуру по специальности «Мировая Экономика».</p>
                             </div>
 
                             <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col items-start transition-colors duration-300 hover:border-[#F2CB57]">
                                 <svg class="w-6 h-6 text-[#F2CB57] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
-                                <h4 class="font-semibold text-white mb-2">Управление и РОП</h4>
-                                <p class="text-sm text-brand-muted font-normal">Владел маркетинговым агентством «ЭЙВО». Руководил продажами (РОП) в транснациональных компаниях, добиваясь результатов выше запланированных и ожидаемых.</p>
+                                <h4 class="font-semibold text-white mb-2" data-i18n="about_edu_card2_title">Управление и РОП</h4>
+                                <p class="text-sm text-brand-muted font-normal" data-i18n="about_edu_card2_desc">Владел маркетинговым агентством «ЭЙВО». Руководил продажами (РОП) в транснациональных компаниях, добиваясь результатов выше запланированных и ожидаемых.</p>
                             </div>
 
                             <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col items-start transition-colors duration-300 hover:border-[#F2CB57]">
                                 <svg class="w-6 h-6 text-[#F2CB57] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                                <h4 class="font-semibold text-white mb-2">Проект CHOIX (ЗОВ)</h4>
-                                <p class="text-sm text-brand-muted font-normal">Основал мебельный проект «CHOIX». Выстроил розничные продажи на фабрике «ЗОВ» впервые за 20 лет, доказав эффективность разработанного бизнес-плана на деле.</p>
+                                <h4 class="font-semibold text-white mb-2" data-i18n="about_edu_card3_title">Проект CHOIX (ЗОВ)</h4>
+                                <p class="text-sm text-brand-muted font-normal" data-i18n="about_edu_card3_desc">Основал мебельный проект «CHOIX». Выстроил розничные продажи на фабрике «ЗОВ» впервые за 20 лет, доказав эффективность разработанного бизнес-плана на деле.</p>
                             </div>
 
                             <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col items-start transition-colors duration-300 hover:border-[#F2CB57]">
                                 <svg class="w-6 h-6 text-[#F2CB57] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <h4 class="font-semibold text-white mb-2">Дипломатия</h4>
-                                <p class="text-sm text-brand-muted font-normal">Окончил курс дипломатии при Варшавском университете. И продолжаю учиться дальше.</p>
+                                <h4 class="font-semibold text-white mb-2" data-i18n="about_edu_card4_title">Дипломатия</h4>
+                                <p class="text-sm text-brand-muted font-normal" data-i18n="about_edu_card4_desc">Окончил курс дипломатии при Варшавском университете. И продолжаю учиться дальше.</p>
                             </div>
 
                         </div>
@@ -352,119 +358,119 @@
                 <div class="max-w-7xl mx-auto w-full">
                     
                     <div class="text-center mb-16 flex flex-col items-center">
-                        <span class="text-brand-orange font-semibold text-sm uppercase tracking-widest mb-3">Прайс-лист</span>
-                        <h2 class="text-3xl sm:text-4xl font-semibold text-white">Форматы работы</h2>
+                        <span class="text-brand-orange font-semibold text-sm uppercase tracking-widest mb-3" data-i18n="services_tag">Прайс-лист</span>
+                        <h2 class="text-3xl sm:text-4xl font-semibold text-white" data-i18n="services_title">Форматы работы</h2>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
                         
                         <div class="w-full bg-brand-card border border-brand-border rounded-2xl p-8 flex flex-col transition-all duration-300 ease-out hover:border-brand-orange hover:shadow-[0_0_20px_rgba(229,115,16,0.1)] group relative">
                             <div class="w-10 h-10 rounded-full bg-[#222] border border-[#333] flex items-center justify-center mb-4 text-brand-orange font-bold text-sm">01</div>
-                            <h3 class="text-xl font-semibold text-white mb-2">День с кинологом / интенсив</h3>
-                            <p class="text-2xl font-bold text-gradient mb-4">1500 zł</p>
+                            <h3 class="text-xl font-semibold text-white mb-2" data-i18n="service01_title">День с кинологом / интенсив</h3>
+                            <p class="text-2xl font-bold text-gradient mb-4" data-i18n="service01_price">1500 zł</p>
                             <div class="text-sm text-brand-muted font-normal leading-relaxed flex-grow mb-6 space-y-2">
-                                <p>Полное погружение в жизнь собаки.</p>
+                                <p data-i18n="service01_desc">Полное погружение в жизнь собаки.</p>
                                 <ul class="list-disc pl-4 space-y-1">
-                                    <li>Отработка поведения здесь и сейчас.</li>
-                                    <li>Выезд до 40 км включен в стоимость.</li>
-                                    <li>Неделя поддержки онлайн в подарок.</li>
-                                    <li>Предоплата: 500 злотых.</li>
+                                    <li data-i18n="service01_list1">Отработка поведения здесь и сейчас.</li>
+                                    <li data-i18n="service01_list2">Выезд до 40 км включен в стоимость.</li>
+                                    <li data-i18n="service01_list3">Неделя поддержки онлайн в подарок.</li>
+                                    <li data-i18n="service01_list4">Предоплата: 500 злотых.</li>
                                 </ul>
                             </div>
-                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out">
+                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out" data-i18n="service01_cta">
                                 Выбрать формат
                             </button>
                         </div>
 
                         <div class="w-full bg-brand-card border border-brand-border rounded-2xl p-8 flex flex-col transition-all duration-300 ease-out hover:border-brand-orange hover:shadow-[0_0_20px_rgba(229,115,16,0.1)] group relative">
                             <div class="w-10 h-10 rounded-full bg-[#222] border border-[#333] flex items-center justify-center mb-4 text-brand-orange font-bold text-sm">02</div>
-                            <h3 class="text-xl font-semibold text-white mb-2">Курс для щенков до 1 года + сопровождение</h3>
-                            <p class="text-2xl font-bold text-gradient mb-4">2400 zł</p>
+                            <h3 class="text-xl font-semibold text-white mb-2" data-i18n="service02_title">Курс для щенков до 1 года + сопровождение</h3>
+                            <p class="text-2xl font-bold text-gradient mb-4" data-i18n="service02_price">2400 zł</p>
                             <div class="text-sm text-brand-muted font-normal leading-relaxed flex-grow mb-6 space-y-2">
-                                <p>Базовые знания, практика, улица, социализация.</p>
+                                <p data-i18n="service02_desc">Базовые знания, практика, улица, социализация.</p>
                                 <ul class="list-disc pl-4 space-y-1">
-                                    <li>Курс из 5 занятий (90+ мин каждое).</li>
-                                    <li>Включено 1 занятие в Корги Клубе.</li>
-                                    <li>Поддержка на протяжении жизни.</li>
-                                    <li>Предоплата: 100 злотых.</li>
+                                    <li data-i18n="service02_list1">Курс из 5 занятий (90+ мин каждое).</li>
+                                    <li data-i18n="service02_list2">Включено 1 занятие в Корги Клубе.</li>
+                                    <li data-i18n="service02_list3">Поддержка на протяжении жизни.</li>
+                                    <li data-i18n="service02_list4">Предоплата: 100 злотых.</li>
                                 </ul>
                             </div>
-                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out">
+                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out" data-i18n="service02_cta">
                                 Выбрать формат
                             </button>
                         </div>
 
                         <div class="w-full bg-brand-card border border-brand-border rounded-2xl p-8 flex flex-col transition-all duration-300 ease-out hover:border-brand-orange hover:shadow-[0_0_20px_rgba(229,115,16,0.1)] group relative">
                             <div class="w-10 h-10 rounded-full bg-[#222] border border-[#333] flex items-center justify-center mb-4 text-brand-orange font-bold text-sm">03</div>
-                            <h3 class="text-xl font-semibold text-white mb-2">Занятие оффлайн</h3>
-                            <p class="text-2xl font-bold text-gradient mb-4">460 zł</p>
+                            <h3 class="text-xl font-semibold text-white mb-2" data-i18n="service03_title">Занятие оффлайн</h3>
+                            <p class="text-2xl font-bold text-gradient mb-4" data-i18n="service03_price">460 zł</p>
                             <div class="text-sm text-brand-muted font-normal leading-relaxed flex-grow mb-6 space-y-2">
-                                <p>Тренировка, коррекция поведения, агрессия, страхи.</p>
+                                <p data-i18n="service03_desc">Тренировка, коррекция поведения, агрессия, страхи.</p>
                                 <ul class="list-disc pl-4 space-y-1">
-                                    <li>Занятие у вас дома или на улице (до 90 мин).</li>
-                                    <li>Дни: Вт - Сб. Выезд до 25 км.</li>
-                                    <li>Онлайн поддержки 7 дней после.</li>
-                                    <li>Предоплата: 100 злотых.</li>
+                                    <li data-i18n="service03_list1">Занятие у вас дома или на улице (до 90 мин).</li>
+                                    <li data-i18n="service03_list2">Дни: Вт - Сб. Выезд до 25 км.</li>
+                                    <li data-i18n="service03_list3">Онлайн поддержки 7 дней после.</li>
+                                    <li data-i18n="service03_list4">Предоплата: 100 злотых.</li>
                                 </ul>
                             </div>
-                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out">
+                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out" data-i18n="service03_cta">
                                 Выбрать формат
                             </button>
                         </div>
 
                         <div class="w-full bg-gradient-to-b from-[#1A1A1A] to-[#121212] border border-brand-orange rounded-2xl p-8 flex flex-col transition-all duration-300 ease-out shadow-[0_0_15px_rgba(229,115,16,0.1)] hover:shadow-[0_0_25px_rgba(229,115,16,0.3)] group relative overflow-hidden">
-                            <div class="absolute top-0 right-0 bg-brand-orange text-[#121212] text-xs font-bold px-4 py-1 rounded-bl-xl tracking-widest uppercase">
+                            <div class="absolute top-0 right-0 bg-brand-orange text-[#121212] text-xs font-bold px-4 py-1 rounded-bl-xl tracking-widest uppercase" data-i18n="service04_badge">
                                 СРОЧНО
                             </div>
                             <div class="w-10 h-10 rounded-full bg-[#222] border border-brand-orange/50 flex items-center justify-center mb-4 text-brand-orange font-bold text-sm">04</div>
-                            <h3 class="text-xl font-semibold text-white mb-2">Срочное занятие оффлайн</h3>
-                            <p class="text-2xl font-bold text-gradient mb-4">600 zł</p>
+                            <h3 class="text-xl font-semibold text-white mb-2" data-i18n="service04_title">Срочное занятие оффлайн</h3>
+                            <p class="text-2xl font-bold text-gradient mb-4" data-i18n="service04_price">600 zł</p>
                             <div class="text-sm text-brand-muted font-normal leading-relaxed flex-grow mb-6 space-y-2">
-                                <p>Экстренный выезд в течение 48 часов.</p>
+                                <p data-i18n="service04_desc">Экстренный выезд в течение 48 часов.</p>
                                 <ul class="list-disc pl-4 space-y-1 text-white/80">
-                                    <li>Решение острых проблем.</li>
-                                    <li>Любой день недели, до 120 минут.</li>
-                                    <li>Выезд до 25 км включен.</li>
-                                    <li>Предоплата: 600 злотых (полная).</li>
+                                    <li data-i18n="service04_list1">Решение острых проблем.</li>
+                                    <li data-i18n="service04_list2">Любой день недели, до 120 минут.</li>
+                                    <li data-i18n="service04_list3">Выезд до 25 км включен.</li>
+                                    <li data-i18n="service04_list4">Предоплата: 600 злотых (полная).</li>
                                 </ul>
                             </div>
-                            <button class="btn-spa-contacts w-full py-3.5 bg-brand-orange text-[#121212] font-semibold rounded-xl hover:bg-brand-yellow transition-colors duration-300 ease-out">
+                            <button class="btn-spa-contacts w-full py-3.5 bg-brand-orange text-[#121212] font-semibold rounded-xl hover:bg-brand-yellow transition-colors duration-300 ease-out" data-i18n="service04_cta">
                                 Вызвать срочно
                             </button>
                         </div>
 
                         <div class="w-full bg-brand-card border border-brand-border rounded-2xl p-8 flex flex-col transition-all duration-300 ease-out hover:border-brand-orange hover:shadow-[0_0_20px_rgba(229,115,16,0.1)] group relative">
                             <div class="w-10 h-10 rounded-full bg-[#222] border border-[#333] flex items-center justify-center mb-4 text-brand-orange font-bold text-sm">05</div>
-                            <h3 class="text-xl font-semibold text-white mb-2">Консультация онлайн</h3>
-                            <p class="text-2xl font-bold text-gradient mb-4">360 zł</p>
+                            <h3 class="text-xl font-semibold text-white mb-2" data-i18n="service05_title">Консультация онлайн</h3>
+                            <p class="text-2xl font-bold text-gradient mb-4" data-i18n="service05_price">360 zł</p>
                             <div class="text-sm text-brand-muted font-normal leading-relaxed flex-grow mb-6 space-y-2">
-                                <p>Идеально, если вы в другом городе или стране.</p>
+                                <p data-i18n="service05_desc">Идеально, если вы в другом городе или стране.</p>
                                 <ul class="list-disc pl-4 space-y-1">
-                                    <li>Разбор проблемы по видеосвязи (до 90 мин).</li>
-                                    <li>Нужен помощник с телефоном.</li>
-                                    <li>*Срочный созвон (в течение 5ч) — 460 zł.</li>
-                                    <li>Предоплата: 100 злотых.</li>
+                                    <li data-i18n="service05_list1">Разбор проблемы по видеосвязи (до 90 мин).</li>
+                                    <li data-i18n="service05_list2">Нужен помощник с телефоном.</li>
+                                    <li data-i18n="service05_list3">*Срочный созвон (в течение 5ч) — 460 zł.</li>
+                                    <li data-i18n="service05_list4">Предоплата: 100 злотых.</li>
                                 </ul>
                             </div>
-                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out">
+                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out" data-i18n="service05_cta">
                                 Выбрать формат
                             </button>
                         </div>
 
                         <div class="w-full bg-brand-card border border-brand-border rounded-2xl p-8 flex flex-col transition-all duration-300 ease-out hover:border-brand-orange hover:shadow-[0_0_20px_rgba(229,115,16,0.1)] group relative">
                             <div class="w-10 h-10 rounded-full bg-[#222] border border-[#333] flex items-center justify-center mb-4 text-brand-orange font-bold text-sm">06</div>
-                            <h3 class="text-xl font-semibold text-white mb-2">Поддержка онлайн 7 дней</h3>
-                            <p class="text-2xl font-bold text-gradient mb-4">360 zł</p>
+                            <h3 class="text-xl font-semibold text-white mb-2" data-i18n="service06_title">Поддержка онлайн 7 дней</h3>
+                            <p class="text-2xl font-bold text-gradient mb-4" data-i18n="service06_price">360 zł</p>
                             <div class="text-sm text-brand-muted font-normal leading-relaxed flex-grow mb-6 space-y-2">
-                                <p>7 дней заданий, разборов видео, комментариев.</p>
+                                <p data-i18n="service06_desc">7 дней заданий, разборов видео, комментариев.</p>
                                 <ul class="list-disc pl-4 space-y-1">
-                                    <li>Отлично для социализации и базовых команд.</li>
-                                    <li>Не подходит для агрессии и страхов.</li>
-                                    <li>Ответы с 20:00 до 10:00 след. дня.</li>
-                                    <li>Предоплата: 100 злотых.</li>
+                                    <li data-i18n="service06_list1">Отлично для социализации и базовых команд.</li>
+                                    <li data-i18n="service06_list2">Не подходит для агрессии и страхов.</li>
+                                    <li data-i18n="service06_list3">Ответы с 20:00 до 10:00 след. дня.</li>
+                                    <li data-i18n="service06_list4">Предоплата: 100 злотых.</li>
                                 </ul>
                             </div>
-                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out">
+                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out" data-i18n="service06_cta">
                                 Выбрать формат
                             </button>
                         </div>
@@ -472,74 +478,74 @@
                         <div class="w-full md:col-span-2 lg:col-span-3 bg-[#1A1A1A] border border-brand-border rounded-2xl p-8 lg:p-12 flex flex-col lg:flex-row items-center gap-10 transition-all duration-300 ease-out hover:border-brand-orange group">
                             <div class="flex-grow flex flex-col items-start w-full">
                                 <div class="w-10 h-10 rounded-full bg-[#222] border border-[#333] flex items-center justify-center mb-4 text-brand-orange font-bold text-sm">07</div>
-                                <h3 class="text-2xl lg:text-3xl font-semibold text-white mb-2">Корги Клуб (Варшава)</h3>
-                                <p class="text-3xl font-bold text-brand-orange mb-6">100 zł</p>
+                                <h3 class="text-2xl lg:text-3xl font-semibold text-white mb-2" data-i18n="service07_title">Корги Клуб (Варшава)</h3>
+                                <p class="text-3xl font-bold text-brand-orange mb-6" data-i18n="service07_price">100 zł</p>
                                 <div class="text-brand-muted font-normal leading-relaxed mb-6 space-y-3 w-full">
-                                    <p>Провожу групповые занятие по субботам в Варшаве «Корги Клуб» для всех пород и возрастов.</p>
-                                    <p>Решаем вопросы социализации, дрессировки, внимания и контакта с владельцами.</p>
+                                    <p data-i18n="service07_desc1">Провожу групповые занятие по субботам в Варшаве «Корги Клуб» для всех пород и возрастов.</p>
+                                    <p data-i18n="service07_desc2">Решаем вопросы социализации, дрессировки, внимания и контакта с владельцами.</p>
                                     <ul class="list-disc pl-5 mt-4 text-sm grid grid-cols-1 sm:grid-cols-2 gap-2 text-white/80">
-                                        <li>Прогулка, концентрация на владельце</li>
-                                        <li>Площадка, свободный выгул</li>
-                                        <li>Ночной клуб (спокойные реакции)</li>
-                                        <li>Длительность до 90 мин</li>
+                                        <li data-i18n="service07_list1">Прогулка, концентрация на владельце</li>
+                                        <li data-i18n="service07_list2">Площадка, свободный выгул</li>
+                                        <li data-i18n="service07_list3">Ночной клуб (спокойные реакции)</li>
+                                        <li data-i18n="service07_list4">Длительность до 90 мин</li>
                                     </ul>
                                 </div>
-                                <a href="https://t.me/+xAQn5FJKOHgxNmQ0" target="_blank" rel="noopener noreferrer" class="inline-block px-10 py-4 bg-gradient-brand text-[#121212] font-semibold rounded-xl hover:opacity-90 transition-opacity duration-300 ease-out">
+                                <a href="https://t.me/+xAQn5FJKOHgxNmQ0" target="_blank" rel="noopener noreferrer" class="inline-block px-10 py-4 bg-gradient-brand text-[#121212] font-semibold rounded-xl hover:opacity-90 transition-opacity duration-300 ease-out" data-i18n="service07_cta">
                                     Вступить в клуб
                                 </a>
                             </div>
                             <div class="w-full lg:w-[400px] shrink-0 rounded-2xl overflow-hidden border border-[#333] relative">
-                                <img src="corgi.jpg" alt="Корги Клуб" class="w-full h-full object-cover">
+                                <img src="corgi.jpg" alt="Корги Клуб" class="w-full h-full object-cover" data-i18n="service07_image_alt" data-i18n-attr="alt">
                             </div>
                         </div>
 
                         <div class="w-full bg-brand-card border border-brand-border rounded-2xl p-8 flex flex-col transition-all duration-300 ease-out hover:border-brand-orange hover:shadow-[0_0_20px_rgba(229,115,16,0.1)] group relative">
                             <div class="w-10 h-10 rounded-full bg-[#222] border border-[#333] flex items-center justify-center mb-4 text-brand-orange font-bold text-sm">08</div>
-                            <h3 class="text-xl font-semibold text-white mb-2">Подарок для ребенка / сертификат</h3>
-                            <p class="text-2xl font-bold text-gradient mb-4">460 zł</p>
+                            <h3 class="text-xl font-semibold text-white mb-2" data-i18n="service08_title">Подарок для ребенка / сертификат</h3>
+                            <p class="text-2xl font-bold text-gradient mb-4" data-i18n="service08_price">460 zł</p>
                             <div class="text-sm text-brand-muted font-normal leading-relaxed flex-grow mb-6 space-y-2">
-                                <p>Обучение ребенка ответственности и взаимоотношениям с собакой.</p>
+                                <p data-i18n="service08_desc">Обучение ребенка ответственности и взаимоотношениям с собакой.</p>
                                 <ul class="list-disc pl-4 space-y-1">
-                                    <li>Прогулка минимум 120 мин.</li>
-                                    <li>Показываю на примере 1-2 моих собак.</li>
-                                    <li>Фото и видео включены.</li>
+                                    <li data-i18n="service08_list1">Прогулка минимум 120 мин.</li>
+                                    <li data-i18n="service08_list2">Показываю на примере 1-2 моих собак.</li>
+                                    <li data-i18n="service08_list3">Фото и видео включены.</li>
                                 </ul>
                             </div>
-                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out">
+                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out" data-i18n="service08_cta">
                                 Купить
                             </button>
                         </div>
 
                         <div class="w-full bg-brand-card border border-brand-border rounded-2xl p-8 flex flex-col transition-all duration-300 ease-out hover:border-brand-orange hover:shadow-[0_0_20px_rgba(229,115,16,0.1)] group relative">
                             <div class="w-10 h-10 rounded-full bg-[#222] border border-[#333] flex items-center justify-center mb-4 text-brand-orange font-bold text-sm">09</div>
-                            <h3 class="text-xl font-semibold text-white mb-2">Интенсивы по командам</h3>
-                            <p class="text-xl font-bold text-white mb-2">Групповой формат</p>
-                            <p class="text-2xl font-bold text-gradient mb-4">260 zł</p>
+                            <h3 class="text-xl font-semibold text-white mb-2" data-i18n="service09_title">Интенсивы по командам</h3>
+                            <p class="text-xl font-bold text-white mb-2" data-i18n="service09_subtitle">Групповой формат</p>
+                            <p class="text-2xl font-bold text-gradient mb-4" data-i18n="service09_price">260 zł</p>
                             <div class="text-sm text-brand-muted font-normal leading-relaxed flex-grow mb-6 space-y-2">
-                                <p>Программа на 7 дней. Формат работы "На вылет".</p>
+                                <p data-i18n="service09_desc">Программа на 7 дней. Формат работы "На вылет".</p>
                                 <ul class="list-disc pl-4 space-y-1">
-                                    <li>Команды: Ко мне, Рядом, Место, Ждать.</li>
-                                    <li>Группы 4-6 человек.</li>
-                                    <li>Нет ДЗ до 22:00 — вылет из группы.</li>
+                                    <li data-i18n="service09_list1">Команды: Ко мне, Рядом, Место, Ждать.</li>
+                                    <li data-i18n="service09_list2">Группы 4-6 человек.</li>
+                                    <li data-i18n="service09_list3">Нет ДЗ до 22:00 — вылет из группы.</li>
                                 </ul>
                             </div>
-                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out">
+                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out" data-i18n="service09_cta">
                                 Узнать старт
                             </button>
                         </div>
 
                         <div class="w-full bg-[#1A1A1A] border border-brand-border rounded-2xl p-8 flex flex-col transition-all duration-300 ease-out hover:border-brand-orange group relative">
                             <div class="w-10 h-10 rounded-full bg-[#222] border border-[#333] flex items-center justify-center mb-4 text-brand-orange font-bold text-sm">10</div>
-                            <h3 class="text-xl font-semibold text-white mb-2">Избавление от страха собак</h3>
-                            <p class="text-2xl font-bold text-gradient mb-4">1 zł</p>
+                            <h3 class="text-xl font-semibold text-white mb-2" data-i18n="service10_title">Избавление от страха собак</h3>
+                            <p class="text-2xl font-bold text-gradient mb-4" data-i18n="service10_price">1 zł</p>
                             <div class="text-sm text-brand-muted font-normal leading-relaxed flex-grow mb-6 space-y-2">
-                                <p>Мой социальный вклад. Встреча с безопасной собакой.</p>
+                                <p data-i18n="service10_desc">Мой социальный вклад. Встреча с безопасной собакой.</p>
                                 <ul class="list-disc pl-4 space-y-1">
-                                    <li>Пошаговая проработка страха у детей и взрослых.</li>
-                                    <li>Сможете гладить и давать команды.</li>
+                                    <li data-i18n="service10_list1">Пошаговая проработка страха у детей и взрослых.</li>
+                                    <li data-i18n="service10_list2">Сможете гладить и давать команды.</li>
                                 </ul>
                             </div>
-                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out">
+                            <button class="btn-spa-contacts w-full py-3.5 border border-brand-border text-white font-semibold rounded-xl hover:bg-brand-orange hover:border-brand-orange hover:text-[#121212] transition-colors duration-300 ease-out" data-i18n="service10_cta">
                                 Написать мне
                             </button>
                         </div>
@@ -552,8 +558,8 @@
                 <div class="max-w-7xl mx-auto w-full">
                     
                     <div class="text-center mb-16 flex flex-col items-center">
-                        <span class="text-brand-orange font-semibold text-sm uppercase tracking-widest mb-3">Отзывы</span>
-                        <h2 class="text-3xl sm:text-4xl font-semibold text-white">Результаты учеников</h2>
+                        <span class="text-brand-orange font-semibold text-sm uppercase tracking-widest mb-3" data-i18n="reviews_tag">Отзывы</span>
+                        <h2 class="text-3xl sm:text-4xl font-semibold text-white" data-i18n="reviews_title">Результаты учеников</h2>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-14">
@@ -566,11 +572,11 @@
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                             </div>
-                            <h4 class="text-white font-semibold mb-3">Решение проблемы страхов</h4>
-                            <p class="text-brand-muted text-sm leading-relaxed mb-4">
+                            <h4 class="text-white font-semibold mb-3" data-i18n="review1_title">Решение проблемы страхов</h4>
+                            <p class="text-brand-muted text-sm leading-relaxed mb-4" data-i18n="review1_text">
                                 Обратились с проблемой постоянного страха громких звуков у собаки на улице. Благодаря инженерной точности и выстроенной системе мы смогли найти причину. Теперь прогулки приносят удовольствие!
                             </p>
-                            <p class="text-xs text-white/50 uppercase tracking-wide">Екатерина и джек-рассел Боня</p>
+                            <p class="text-xs text-white/50 uppercase tracking-wide" data-i18n="review1_author">Екатерина и джек-рассел Боня</p>
                         </div>
 
                         <div class="bg-brand-card border border-brand-border rounded-2xl p-8 transition-all duration-300 ease-out hover:border-brand-orange hover:-translate-y-1">
@@ -581,11 +587,11 @@
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                             </div>
-                            <h4 class="text-white font-semibold mb-3">Социализация в Корги Клубе</h4>
-                            <p class="text-brand-muted text-sm leading-relaxed mb-4">
+                            <h4 class="text-white font-semibold mb-3" data-i18n="review2_title">Социализация в Корги Клубе</h4>
+                            <p class="text-brand-muted text-sm leading-relaxed mb-4" data-i18n="review2_text">
                                 Мой пес раньше бросался на других собак. Занятия в Корги Клубе полностью изменили ситуацию. Отличный формат, где работают над контактом и спокойствием в группе.
                             </p>
-                            <p class="text-xs text-white/50 uppercase tracking-wide">Алексей и корги Мартин</p>
+                            <p class="text-xs text-white/50 uppercase tracking-wide" data-i18n="review2_author">Алексей и корги Мартин</p>
                         </div>
 
                         <div class="bg-brand-card border border-brand-border rounded-2xl p-8 transition-all duration-300 ease-out hover:border-brand-orange hover:-translate-y-1">
@@ -596,11 +602,11 @@
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                             </div>
-                            <h4 class="text-white font-semibold mb-3">Правильный старт для щенка</h4>
-                            <p class="text-brand-muted text-sm leading-relaxed mb-4">
+                            <h4 class="text-white font-semibold mb-3" data-i18n="review3_title">Правильный старт для щенка</h4>
+                            <p class="text-brand-muted text-sm leading-relaxed mb-4" data-i18n="review3_text">
                                 Брали курс для щенка. Больше всего понравился принцип "Не научил — не требуй". Сначала учились мы, а потом уже щенок. Очень логичный подход!
                             </p>
-                            <p class="text-xs text-white/50 uppercase tracking-wide">Мария и лабрадор Рикки</p>
+                            <p class="text-xs text-white/50 uppercase tracking-wide" data-i18n="review3_author">Мария и лабрадор Рикки</p>
                         </div>
                     </div>
 
@@ -612,7 +618,7 @@
                                 <svg class="w-6 h-6 text-white group-hover:text-[#121212] transition-colors duration-300" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12.001 2.002c-5.523 0-10 4.477-10 10.001s4.477 10 10 10c5.522 0 10-4.477 10-10s-4.478-10.001-10-10.001zm3.228 14.537c-.382.261-.837.472-1.365.634-.528.163-1.092.245-1.693.245-1.116 0-2.079-.247-2.888-.742-.809-.494-1.442-1.185-1.899-2.071-.457-.886-.686-1.928-.686-3.125 0-1.258.232-2.315.696-3.173.464-.858 1.096-1.528 1.895-2.01.799-.482 1.708-.723 2.727-.723 1.096 0 2.028.252 2.795.757.767.505 1.348 1.189 1.742 2.052.264.577.447 1.192.548 1.846h-2.584c-.067-.323-.198-.636-.393-.938-.195-.302-.468-.553-.82-.753-.352-.2-.782-.3-1.29-.3-.687 0-1.246.2-1.678.599-.432.399-.742.923-.93 1.573-.188.649-.281 1.368-.281 2.156 0 1.037.126 1.884.378 2.541.252.657.618 1.155 1.098 1.493.48.339 1.05.508 1.71.508.455 0 .862-.075 1.222-.224.36-.15.684-.367.971-.652v-2.091h-2.112v-2.021h4.632v4.42z"/>
                                 </svg>
-                                <span class="font-semibold text-white group-hover:text-[#121212] transition-colors duration-300">Отзывы на Google Картах</span>
+                                <span class="font-semibold text-white group-hover:text-[#121212] transition-colors duration-300" data-i18n="review_links_google">Отзывы на Google Картах</span>
                             </div>
                         </a>
 
@@ -622,7 +628,7 @@
                             <svg class="w-6 h-6 text-white group-hover:text-[#121212] transition-colors duration-300" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                             </svg>
-                            <span class="font-semibold text-white group-hover:text-[#121212] transition-colors duration-300">Видео учеников в Instagram</span>
+                            <span class="font-semibold text-white group-hover:text-[#121212] transition-colors duration-300" data-i18n="review_links_instagram">Видео учеников в Instagram</span>
                             </div>
                         </a>
 
@@ -632,7 +638,7 @@
                                 <svg class="w-6 h-6 text-white group-hover:text-[#121212] transition-colors duration-300" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M23.498 6.186a2.99 2.99 0 0 0-2.106-2.117C19.531 3.5 12 3.5 12 3.5s-7.531 0-9.392.569A2.99 2.99 0 0 0 .502 6.186C0 8.059 0 12 0 12s0 3.941.502 5.814a2.99 2.99 0 0 0 2.106 2.117C4.469 20.5 12 20.5 12 20.5s7.531 0 9.392-.569a2.99 2.99 0 0 0 2.106-2.117C24 15.941 24 12 24 12s0-3.941-.502-5.814zM9.6 15.56V8.44L15.84 12 9.6 15.56z"/>
                                 </svg>
-                                <span class="font-semibold text-white group-hover:text-[#121212] transition-colors duration-300">Подкаст про собак со мной</span>
+                                <span class="font-semibold text-white group-hover:text-[#121212] transition-colors duration-300" data-i18n="review_links_podcast">Подкаст про собак со мной</span>
                             </div>
                         </a>
 
@@ -642,7 +648,7 @@
                                 <svg class="w-6 h-6 text-white group-hover:text-[#121212] transition-colors duration-300" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M21 6h-3.586l-2-2H8.586l-2 2H3a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-9 10.5A3.5 3.5 0 1 1 12 9a3.5 3.5 0 0 1 0 7.5zm5.5-6A1.5 1.5 0 1 1 17.5 7a1.5 1.5 0 0 1 0 3z"/>
                                 </svg>
-                                <span class="font-semibold text-white group-hover:text-[#121212] transition-colors duration-300">Я с собакой на ТВ</span>
+                                <span class="font-semibold text-white group-hover:text-[#121212] transition-colors duration-300" data-i18n="review_links_tv">Я с собакой на ТВ</span>
                             </div>
                         </a>
 
@@ -661,31 +667,31 @@
                 
                 <button class="btn-close-contacts absolute top-6 left-6 flex items-center gap-2 text-brand-muted hover:text-white transition-colors duration-300 font-semibold group">
                     <svg class="w-5 h-5 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                    Назад
+                    <span data-i18n="contacts_back">Назад</span>
                 </button>
 
-                <span class="text-brand-orange font-semibold text-sm uppercase tracking-widest block mt-12 mb-3">Связь со мной</span>
-                <h1 class="text-4xl md:text-5xl font-semibold text-white mb-6">Запись на занятия</h1>
-                <p class="text-brand-muted font-normal mb-10 text-lg">
+                <span class="text-brand-orange font-semibold text-sm uppercase tracking-widest block mt-12 mb-3" data-i18n="contacts_tag">Связь со мной</span>
+                <h1 class="text-4xl md:text-5xl font-semibold text-white mb-6" data-i18n="contacts_title">Запись на занятия</h1>
+                <p class="text-brand-muted font-normal mb-10 text-lg" data-i18n="contacts_desc">
                     Выберите удобный мессенджер. Опишите проблему, возраст и породу собаки, чтобы мы подобрали идеальный формат работы.
                 </p>
 
                 <div class="flex flex-col gap-4 w-full">
                     <a href="https://t.me/dogcoachspace" target="_blank" class="w-full flex items-center justify-center gap-4 py-4 px-6 bg-[#2AABEE]/10 border border-[#2AABEE]/30 rounded-2xl hover:bg-[#2AABEE]/20 transition-colors duration-300 ease-out group">
                         <svg class="w-8 h-8 text-[#2AABEE] group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm5.894-16.481l-1.934 9.112c-.147.649-.526.809-1.066.505l-2.949-2.173-1.423 1.372c-.157.157-.291.291-.597.291l.211-3.003 5.464-4.938c.238-.212-.051-.33-.368-.119l-6.753 4.25-2.911-.911c-.633-.198-.646-.633.131-.938l11.378-4.382c.527-.197 1.002.115.817.934z"/></svg>
-                        <span class="text-lg font-semibold text-[#2AABEE]">Написать в Telegram</span>
+                        <span class="text-lg font-semibold text-[#2AABEE]" data-i18n="contacts_telegram">Написать в Telegram</span>
                     </a>
 
                     <a href="https://www.instagram.com/dogcoach.space/" target="_blank" class="w-full flex items-center justify-center gap-4 py-4 px-6 bg-[#E1306C]/10 border border-[#E1306C]/30 rounded-2xl hover:bg-[#E1306C]/20 transition-colors duration-300 ease-out group">
                         <svg class="w-8 h-8 text-[#E1306C] group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        <span class="text-lg font-semibold text-[#E1306C]">Перейти в Instagram</span>
+                        <span class="text-lg font-semibold text-[#E1306C]" data-i18n="contacts_instagram">Перейти в Instagram</span>
                     </a>
 
                     <a href="tel:+48505706614" class="w-full flex items-center justify-center gap-4 py-4 px-6 bg-[#25D366]/10 border border-[#25D366]/30 rounded-2xl hover:bg-[#25D366]/20 transition-colors duration-300 ease-out group">
                         <svg class="w-8 h-8 text-[#25D366] group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.86 19.86 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.86 19.86 0 012.08 4.18 2 2 0 014.06 2h3a2 2 0 012 1.72c.12.9.33 1.78.61 2.63a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.45-1.13a2 2 0 012.11-.45c.85.28 1.73.49 2.63.61A2 2 0 0122 16.92z"></path>
                         </svg>
-                        <span class="text-lg font-semibold text-[#25D366]">Позвонить: +48505706614</span>
+                        <span class="text-lg font-semibold text-[#25D366]" data-i18n="contacts_phone">Позвонить: +48505706614</span>
                     </a>
                 </div>
 
@@ -694,13 +700,13 @@
 
     </div> <footer class="w-full py-8 border-t border-brand-border bg-[#0A0A0A] mt-auto relative z-10">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-brand-muted text-sm font-semibold tracking-wide">
+            <p class="text-brand-muted text-sm font-semibold tracking-wide" data-i18n="footer_rights">
                 © 2026 Dog Coach Space. Варшава. Все права защищены.
             </p>
             <p class="text-brand-muted text-sm font-semibold tracking-wide mt-2">
-                Дизайн и разработка:
+                <span data-i18n="footer_credit_label">Дизайн и разработка:</span>
                 <a href="https://www.instagram.com/mazoxxa/" target="_blank" rel="noopener noreferrer" class="text-brand-muted hover:text-[#E1306C] transition-colors duration-300">
-                    Владислав Малойло
+                    <span data-i18n="footer_credit_name">Владислав Малойло</span>
                 </a>
             </p>
         </div>
@@ -746,6 +752,613 @@
                 if (e.key === 'Escape' && !pageContacts.classList.contains('hidden-page')) {
                     closeContactsModal();
                 }
+            });
+        });
+    </script>
+
+    <script>
+        const translations = {
+            ru: {
+                nav_brand: 'DOG<span class="text-gradient">COACH</span>',
+                nav_philosophy: 'Мой подход',
+                nav_about: 'Обо мне',
+                nav_services: 'Услуги',
+                nav_reviews: 'Отзывы',
+                nav_cta: 'Записаться',
+                fab_label: 'Оставить заявку',
+
+                hero_badge: 'Киноголог • Зоопсихолог • Варшава',
+                hero_title: '<span class="text-gradient">Воспитание собаки через понимание,</span> <br>а не силу.',
+                hero_desc: 'На практике показываю владельцам собак, как выстроить отношения с питомцем, как скорректировать поведение и научить командам, чтоб двигаться к усложнениям в командах. <br>Оказываю поддержку для закрепления результатов.',
+                hero_cta_primary: 'Оставить заявку',
+                hero_cta_secondary: 'Смотреть услуги',
+                hero_image_alt: 'Dog Coach',
+
+                philosophy_tag: 'Мой подход',
+                philosophy_title: '"НЕ НАУЧИЛ — <span class="text-gradient">НЕ ТРЕБУЙ</span>"',
+                philosophy_desc: 'Главный принцип, который повторяю всегда и придерживаюсь его в жизни. Понимая его, не будет раздражения, злости и разочарований при взаимодействии с питомцем.',
+                philosophy_card1_title: 'ОБУЧЕНИЕ',
+                philosophy_card1_desc: 'Научить можно только примером. В первую очередь учу владельца питомца. Нужно быть готовым учиться и меняться самому.',
+                philosophy_card2_title: 'ВНИМАНИЕ',
+                philosophy_card2_desc: 'Особое внимание к деталям и причинам. Именно они играют самую важную роль в правильной корректировке поведения.',
+                philosophy_card3_title: 'СПОКОЙСТВИЕ',
+                philosophy_card3_desc: 'Чтобы добиться результата, нужна система, которой делюсь с вами, последовательность в действиях и дисциплина от самого себя.',
+                philosophy_card4_title: 'ЛЮБОВЬ И ВЕРА',
+                philosophy_card4_desc: 'Верю в то, что делаю и добиваюсь результата. Верю в ваших питомцев и занимаюсь любимым делом.',
+
+                about_tag: 'Обо мне',
+                about_title: 'Инженер, Дипломат, <span class="text-gradient">Кинолог</span>',
+                about_path_title: 'Мой путь в кинологии',
+                about_path_card1_title: 'Начало пути',
+                about_path_card1_desc: 'С 5 лет увлекался воспитанием и дрессировкой собак. Это стало страстью всей жизни.',
+                about_path_card2_title: 'Профессиональная база',
+                about_path_card2_desc: 'Больше 5 лет активно занимался с профессиональным кинологом Капустиной Натальей Валентиновной.',
+                about_path_card3_title: 'Выставки и клубы',
+                about_path_card3_desc: 'Участие в выставке 1998 года. Состоял в Белорусском кинологическом объединении «Альба Росс», готовил собак к соревнованиям.',
+                about_path_card4_title: 'Школа А. Наджаряна',
+                about_path_card4_desc: 'Прошел глубокое обучение в школе знаменитого специалиста по поведению собак Антуана Наджаряна.',
+                about_path_card5_title: 'Служебное собаководство',
+                about_path_card5_desc: 'Успешно закончил обучение в Национальной Школе Служебного Собаководства Украины.',
+                about_path_card6_title: 'Практика в Варшаве',
+                about_path_card6_desc: 'Официально работаю в Варшаве с 2023 года. Решаю проблемы с агрессией, тревожностью и сложными случаями.',
+                about_edu_title: 'Образование и Управление',
+                about_edu_card1_title: 'Инженерия & Экономика',
+                about_edu_card1_desc: 'Получил высшее техническое (инженерное) образование. Закончил магистратуру по специальности «Мировая Экономика».',
+                about_edu_card2_title: 'Управление и РОП',
+                about_edu_card2_desc: 'Владел маркетинговым агентством «ЭЙВО». Руководил продажами (РОП) в транснациональных компаниях, добиваясь результатов выше запланированных и ожидаемых.',
+                about_edu_card3_title: 'Проект CHOIX (ЗОВ)',
+                about_edu_card3_desc: 'Основал мебельный проект «CHOIX». Выстроил розничные продажи на фабрике «ЗОВ» впервые за 20 лет, доказав эффективность разработанного бизнес-плана на деле.',
+                about_edu_card4_title: 'Дипломатия',
+                about_edu_card4_desc: 'Окончил курс дипломатии при Варшавском университете. И продолжаю учиться дальше.',
+
+                services_tag: 'Прайс-лист',
+                services_title: 'Форматы работы',
+
+                service01_title: 'День с кинологом / интенсив',
+                service01_price: '1500 zł',
+                service01_desc: 'Полное погружение в жизнь собаки.',
+                service01_list1: 'Отработка поведения здесь и сейчас.',
+                service01_list2: 'Выезд до 40 км включен в стоимость.',
+                service01_list3: 'Неделя поддержки онлайн в подарок.',
+                service01_list4: 'Предоплата: 500 злотых.',
+                service01_cta: 'Выбрать формат',
+
+                service02_title: 'Курс для щенков до 1 года + сопровождение',
+                service02_price: '2400 zł',
+                service02_desc: 'Базовые знания, практика, улица, социализация.',
+                service02_list1: 'Курс из 5 занятий (90+ мин каждое).',
+                service02_list2: 'Включено 1 занятие в Корги Клубе.',
+                service02_list3: 'Поддержка на протяжении жизни.',
+                service02_list4: 'Предоплата: 100 злотых.',
+                service02_cta: 'Выбрать формат',
+
+                service03_title: 'Занятие оффлайн',
+                service03_price: '460 zł',
+                service03_desc: 'Тренировка, коррекция поведения, агрессия, страхи.',
+                service03_list1: 'Занятие у вас дома или на улице (до 90 мин).',
+                service03_list2: 'Дни: Вт - Сб. Выезд до 25 км.',
+                service03_list3: 'Онлайн поддержки 7 дней после.',
+                service03_list4: 'Предоплата: 100 злотых.',
+                service03_cta: 'Выбрать формат',
+
+                service04_badge: 'СРОЧНО',
+                service04_title: 'Срочное занятие оффлайн',
+                service04_price: '600 zł',
+                service04_desc: 'Экстренный выезд в течение 48 часов.',
+                service04_list1: 'Решение острых проблем.',
+                service04_list2: 'Любой день недели, до 120 минут.',
+                service04_list3: 'Выезд до 25 км включен.',
+                service04_list4: 'Предоплата: 600 злотых (полная).',
+                service04_cta: 'Вызвать срочно',
+
+                service05_title: 'Консультация онлайн',
+                service05_price: '360 zł',
+                service05_desc: 'Идеально, если вы в другом городе или стране.',
+                service05_list1: 'Разбор проблемы по видеосвязи (до 90 мин).',
+                service05_list2: 'Нужен помощник с телефоном.',
+                service05_list3: '*Срочный созвон (в течение 5ч) — 460 zł.',
+                service05_list4: 'Предоплата: 100 злотых.',
+                service05_cta: 'Выбрать формат',
+
+                service06_title: 'Поддержка онлайн 7 дней',
+                service06_price: '360 zł',
+                service06_desc: '7 дней заданий, разборов видео, комментариев.',
+                service06_list1: 'Отлично для социализации и базовых команд.',
+                service06_list2: 'Не подходит для агрессии и страхов.',
+                service06_list3: 'Ответы с 20:00 до 10:00 след. дня.',
+                service06_list4: 'Предоплата: 100 злотых.',
+                service06_cta: 'Выбрать формат',
+
+                service07_title: 'Корги Клуб (Варшава)',
+                service07_price: '100 zł',
+                service07_desc1: 'Провожу групповые занятие по субботам в Варшаве «Корги Клуб» для всех пород и возрастов.',
+                service07_desc2: 'Решаем вопросы социализации, дрессировки, внимания и контакта с владельцами.',
+                service07_list1: 'Прогулка, концентрация на владельце',
+                service07_list2: 'Площадка, свободный выгул',
+                service07_list3: 'Ночной клуб (спокойные реакции)',
+                service07_list4: 'Длительность до 90 мин',
+                service07_cta: 'Вступить в клуб',
+                service07_image_alt: 'Корги Клуб',
+
+                service08_title: 'Подарок для ребенка / сертификат',
+                service08_price: '460 zł',
+                service08_desc: 'Обучение ребенка ответственности и взаимоотношениям с собакой.',
+                service08_list1: 'Прогулка минимум 120 мин.',
+                service08_list2: 'Показываю на примере 1-2 моих собак.',
+                service08_list3: 'Фото и видео включены.',
+                service08_cta: 'Купить',
+
+                service09_title: 'Интенсивы по командам',
+                service09_subtitle: 'Групповой формат',
+                service09_price: '260 zł',
+                service09_desc: 'Программа на 7 дней. Формат работы "На вылет".',
+                service09_list1: 'Команды: Ко мне, Рядом, Место, Ждать.',
+                service09_list2: 'Группы 4-6 человек.',
+                service09_list3: 'Нет ДЗ до 22:00 — вылет из группы.',
+                service09_cta: 'Узнать старт',
+
+                service10_title: 'Избавление от страха собак',
+                service10_price: '1 zł',
+                service10_desc: 'Мой социальный вклад. Встреча с безопасной собакой.',
+                service10_list1: 'Пошаговая проработка страха у детей и взрослых.',
+                service10_list2: 'Сможете гладить и давать команды.',
+                service10_cta: 'Написать мне',
+
+                reviews_tag: 'Отзывы',
+                reviews_title: 'Результаты учеников',
+                review1_title: 'Решение проблемы страхов',
+                review1_text: 'Обратились с проблемой постоянного страха громких звуков у собаки на улице. Благодаря инженерной точности и выстроенной системе мы смогли найти причину. Теперь прогулки приносят удовольствие!',
+                review1_author: 'Екатерина и джек-рассел Боня',
+                review2_title: 'Социализация в Корги Клубе',
+                review2_text: 'Мой пес раньше бросался на других собак. Занятия в Корги Клубе полностью изменили ситуацию. Отличный формат, где работают над контактом и спокойствием в группе.',
+                review2_author: 'Алексей и корги Мартин',
+                review3_title: 'Правильный старт для щенка',
+                review3_text: 'Брали курс для щенка. Больше всего понравился принцип "Не научил — не требуй". Сначала учились мы, а потом уже щенок. Очень логичный подход!',
+                review3_author: 'Мария и лабрадор Рикки',
+
+                review_links_google: 'Отзывы на Google Картах',
+                review_links_instagram: 'Видео учеников в Instagram',
+                review_links_podcast: 'Подкаст про собак со мной',
+                review_links_tv: 'Я с собакой на ТВ',
+
+                contacts_back: 'Назад',
+                contacts_tag: 'Связь со мной',
+                contacts_title: 'Запись на занятия',
+                contacts_desc: 'Выберите удобный мессенджер. Опишите проблему, возраст и породу собаки, чтобы мы подобрали идеальный формат работы.',
+                contacts_telegram: 'Написать в Telegram',
+                contacts_instagram: 'Перейти в Instagram',
+                contacts_phone: 'Позвонить: +48505706614',
+
+                footer_rights: '© 2026 Dog Coach Space. Варшава. Все права защищены.',
+                footer_credit_label: 'Дизайн и разработка:',
+                footer_credit_name: 'Владислав Малойло',
+
+                meta_title: 'Кинолог Зоопсихолог Варшава',
+                meta_description: 'Воспитание собаки через понимание, а не силу.',
+                og_title: 'Кинолог Зоопсихолог Варшава',
+                og_description: 'Воспитание собаки через понимание, а не силу.'
+            },
+
+            pl: {
+                nav_brand: 'DOG<span class="text-gradient">COACH</span>',
+                nav_philosophy: 'Moje podejście',
+                nav_about: 'O mnie',
+                nav_services: 'Usługi',
+                nav_reviews: 'Opinie',
+                nav_cta: 'Umów się',
+                fab_label: 'Zostaw zgłoszenie',
+
+                hero_badge: 'Behawiorysta • Szkolenie psów • Warszawa',
+                hero_title: '<span class="text-gradient">Wychowanie psa przez zrozumienie,</span> <br>a nie siłę.',
+                hero_desc: 'W praktyce pokazuję opiekunom psów, jak budować relację z pupilem, jak korygować zachowanie i uczyć komend, aby przechodzić do bardziej złożonych umiejętności. <br>Zapewniam wsparcie w utrwalaniu rezultatów.',
+                hero_cta_primary: 'Zostaw zgłoszenie',
+                hero_cta_secondary: 'Zobacz usługi',
+                hero_image_alt: 'Dog Coach',
+
+                philosophy_tag: 'Moje podejście',
+                philosophy_title: '"NIE NAUCZYŁEŚ — <span class="text-gradient">NIE WYMAGAJ</span>"',
+                philosophy_desc: 'Główna zasada, którą zawsze powtarzam i której trzymam się w życiu. Dzięki niej znika irytacja, złość i rozczarowanie w kontakcie z pupilem.',
+                philosophy_card1_title: 'SZKOLENIE',
+                philosophy_card1_desc: 'Można nauczyć tylko poprzez przykład. W pierwszej kolejności uczę opiekuna. Trzeba być gotowym na naukę i zmianę siebie.',
+                philosophy_card2_title: 'UWAŻNOŚĆ',
+                philosophy_card2_desc: 'Szczególna uwaga na detale i przyczyny. To one mają kluczowe znaczenie w prawidłowej korekcie zachowania.',
+                philosophy_card3_title: 'SPOKÓJ',
+                philosophy_card3_desc: 'Aby osiągnąć rezultat, potrzebny jest system, którym się z Wami dzielę, konsekwencja w działaniach i dyscyplina wobec samego siebie.',
+                philosophy_card4_title: 'MIŁOŚĆ I WIARA',
+                philosophy_card4_desc: 'Wierzę w to, co robię i osiągam wyniki. Wierzę w Wasze psy i zajmuję się tym, co kocham.',
+
+                about_tag: 'O mnie',
+                about_title: 'Inżynier, Dyplomata, <span class="text-gradient">Behawiorysta</span>',
+                about_path_title: 'Moja droga w pracy z psami',
+                about_path_card1_title: 'Początek drogi',
+                about_path_card1_desc: 'Od 5. roku życia pasjonowałem się wychowaniem i szkoleniem psów. To stało się pasją całego życia.',
+                about_path_card2_title: 'Baza profesjonalna',
+                about_path_card2_desc: 'Przez ponad 5 lat intensywnie pracowałem z profesjonalnym trenerem psów Natalią Walentynowną Kapustiną.',
+                about_path_card3_title: 'Wystawy i kluby',
+                about_path_card3_desc: 'Udział w wystawie w 1998 roku. Byłem członkiem Białoruskiego Związku Kynologicznego „Alba Ross”, przygotowywałem psy do zawodów.',
+                about_path_card4_title: 'Szkoła A. Nadżariana',
+                about_path_card4_desc: 'Ukończyłem pogłębione szkolenie w szkole znanego specjalisty od zachowania psów Antoine’a Nadżariana.',
+                about_path_card5_title: 'Psy służbowe',
+                about_path_card5_desc: 'Z powodzeniem ukończyłem szkolenie w Narodowej Szkole Psów Służbowych Ukrainy.',
+                about_path_card6_title: 'Praktyka w Warszawie',
+                about_path_card6_desc: 'Oficjalnie pracuję w Warszawie od 2023 roku. Rozwiązuję problemy z agresją, lękiem i trudnymi przypadkami.',
+                about_edu_title: 'Edukacja i Zarządzanie',
+                about_edu_card1_title: 'Inżynieria & Ekonomia',
+                about_edu_card1_desc: 'Ukończyłem wyższe studia techniczne (inżynierskie). Uzyskałem tytuł magistra na kierunku „Gospodarka Światowa”.',
+                about_edu_card2_title: 'Zarządzanie i Sprzedaż',
+                about_edu_card2_desc: 'Prowadziłem agencję marketingową „EYVO”. Kierowałem sprzedażą w firmach międzynarodowych, osiągając wyniki powyżej planu.',
+                about_edu_card3_title: 'Projekt CHOIX (ZOV)',
+                about_edu_card3_desc: 'Założyłem projekt meblowy „CHOIX”. Zbudowałem sprzedaż detaliczną w fabryce „ZOV” po raz pierwszy od 20 lat, potwierdzając skuteczność opracowanego planu biznesowego.',
+                about_edu_card4_title: 'Dyplomacja',
+                about_edu_card4_desc: 'Ukończyłem kurs dyplomacji na Uniwersytecie Warszawskim. I nadal się rozwijam.',
+
+                services_tag: 'Cennik',
+                services_title: 'Formaty współpracy',
+
+                service01_title: 'Dzień z trenerem / intensyw',
+                service01_price: '1500 zł',
+                service01_desc: 'Pełne zanurzenie w życie psa.',
+                service01_list1: 'Praca nad zachowaniem tu i teraz.',
+                service01_list2: 'Dojazd do 40 km w cenie.',
+                service01_list3: 'Tydzień wsparcia online w prezencie.',
+                service01_list4: 'Przedpłata: 500 zł.',
+                service01_cta: 'Wybierz format',
+
+                service02_title: 'Kurs dla szczeniąt do 1 roku + wsparcie',
+                service02_price: '2400 zł',
+                service02_desc: 'Podstawy, praktyka, praca w terenie, socjalizacja.',
+                service02_list1: 'Kurs 5 spotkań (90+ min każde).',
+                service02_list2: 'W cenie 1 zajęcie w Corgi Club.',
+                service02_list3: 'Wsparcie przez całe życie.',
+                service02_list4: 'Przedpłata: 100 zł.',
+                service02_cta: 'Wybierz format',
+
+                service03_title: 'Zajęcia offline',
+                service03_price: '460 zł',
+                service03_desc: 'Trening, korekta zachowania, agresja, lęki.',
+                service03_list1: 'Zajęcia u Ciebie lub w plenerze (do 90 min).',
+                service03_list2: 'Dni: wt - sb. Dojazd do 25 km.',
+                service03_list3: '7 dni wsparcia online po zajęciach.',
+                service03_list4: 'Przedpłata: 100 zł.',
+                service03_cta: 'Wybierz format',
+
+                service04_badge: 'PILNE',
+                service04_title: 'Pilne zajęcie offline',
+                service04_price: '600 zł',
+                service04_desc: 'Pilny dojazd w ciągu 48 godzin.',
+                service04_list1: 'Rozwiązanie nagłych problemów.',
+                service04_list2: 'Dowolny dzień tygodnia, do 120 minut.',
+                service04_list3: 'Dojazd do 25 km w cenie.',
+                service04_list4: 'Przedpłata: 600 zł (pełna).',
+                service04_cta: 'Wezwij pilnie',
+
+                service05_title: 'Konsultacja online',
+                service05_price: '360 zł',
+                service05_desc: 'Idealne, jeśli jesteś w innym mieście lub kraju.',
+                service05_list1: 'Analiza problemu na wideorozmowie (do 90 min).',
+                service05_list2: 'Potrzebny pomocnik z telefonem.',
+                service05_list3: '*Pilny kontakt (w ciągu 5 h) — 460 zł.',
+                service05_list4: 'Przedpłata: 100 zł.',
+                service05_cta: 'Wybierz format',
+
+                service06_title: 'Wsparcie online 7 dni',
+                service06_price: '360 zł',
+                service06_desc: '7 dni zadań, analiz wideo i komentarzy.',
+                service06_list1: 'Świetne do socjalizacji i podstawowych komend.',
+                service06_list2: 'Nie dla agresji i silnych lęków.',
+                service06_list3: 'Odpowiedzi od 20:00 do 10:00 następnego dnia.',
+                service06_list4: 'Przedpłata: 100 zł.',
+                service06_cta: 'Wybierz format',
+
+                service07_title: 'Corgi Club (Warszawa)',
+                service07_price: '100 zł',
+                service07_desc1: 'Prowadzę zajęcia grupowe w soboty w Warszawie „Corgi Club” dla wszystkich ras i wieku.',
+                service07_desc2: 'Pracujemy nad socjalizacją, Szkoleniem psów, uważnością i kontaktem z opiekunem.',
+                service07_list1: 'Spacer, koncentracja na opiekunie',
+                service07_list2: 'Plac, swobodny wybieg',
+                service07_list3: 'Nocny klub (spokojne reakcje)',
+                service07_list4: 'Czas trwania do 90 min',
+                service07_cta: 'Dołącz do klubu',
+                service07_image_alt: 'Corgi Club',
+
+                service08_title: 'Prezent dla dziecka / certyfikat',
+                service08_price: '460 zł',
+                service08_desc: 'Nauka odpowiedzialności i relacji z psem.',
+                service08_list1: 'Spacer minimum 120 min.',
+                service08_list2: 'Pokazuję na przykładzie 1-2 moich psów.',
+                service08_list3: 'Zdjęcia i wideo w cenie.',
+                service08_cta: 'Kup',
+
+                service09_title: 'Intensywy z komend',
+                service09_subtitle: 'Format grupowy',
+                service09_price: '260 zł',
+                service09_desc: 'Program na 7 dni. Format pracy „na wylot”.',
+                service09_list1: 'Komendy: Do mnie, Równaj, Miejsce, Czekaj.',
+                service09_list2: 'Grupy 4-6 osób.',
+                service09_list3: 'Brak prac domowych do 22:00 — wylot z grupy.',
+                service09_cta: 'Sprawdź start',
+
+                service10_title: 'Pokonanie lęku przed psami',
+                service10_price: '1 zł',
+                service10_desc: 'Mój wkład społeczny. Spotkanie z bezpiecznym psem.',
+                service10_list1: 'Krok po kroku praca nad lękiem u dzieci i dorosłych.',
+                service10_list2: 'Nauczysz się głaskać i wydawać komendy.',
+                service10_cta: 'Napisz do mnie',
+
+                reviews_tag: 'Opinie',
+                reviews_title: 'Rezultaty uczniów',
+                review1_title: 'Rozwiązanie problemu lęków',
+                review1_text: 'Zgłosiliśmy się z problemem stałego lęku psa przed głośnymi dźwiękami na ulicy. Dzięki inżynieryjnej precyzji i zbudowanemu systemowi znaleźliśmy przyczynę. Teraz spacery dają przyjemność!',
+                review1_author: 'Katarzyna i jack russell Bonia',
+                review2_title: 'Socjalizacja w Corgi Club',
+                review2_text: 'Mój pies wcześniej rzucał się na inne psy. Zajęcia w Corgi Club całkowicie to zmieniły. Świetny format, gdzie pracuje się nad kontaktem i spokojem w grupie.',
+                review2_author: 'Aleksiej i corgi Martin',
+                review3_title: 'Właściwy start dla szczeniaka',
+                review3_text: 'Wzięliśmy kurs dla szczeniaka. Najbardziej spodobała się zasada „Nie nauczyłeś — nie wymagaj”. Najpierw uczyliśmy się my, potem szczeniak. Bardzo logiczne podejście!',
+                review3_author: 'Maria i labrador Rikki',
+
+                review_links_google: 'Opinie na Google Maps',
+                review_links_instagram: 'Wideo uczniów na Instagramie',
+                review_links_podcast: 'Podcast o psach ze mną',
+                review_links_tv: 'Ja z psem w TV',
+
+                contacts_back: 'Wróć',
+                contacts_tag: 'Kontakt ze mną',
+                contacts_title: 'Zapisy na zajęcia',
+                contacts_desc: 'Wybierz wygodny komunikator. Opisz problem, wiek i rasę psa, abyśmy dobrali idealny format pracy.',
+                contacts_telegram: 'Napisz na Telegramie',
+                contacts_instagram: 'Przejdź na Instagram',
+                contacts_phone: 'Zadzwoń: +48505706614',
+
+                footer_rights: '© 2026 Dog Coach Space. Warszawa. Wszelkie prawa zastrzeżone.',
+                footer_credit_label: 'Projekt i realizacja:',
+                footer_credit_name: 'Władysław Małoilo',
+
+                meta_title: 'Behawiorysta | Szkolenie psów — Warszawa',
+                meta_description: 'Wychowanie psa przez zrozumienie, a nie siłę.',
+                og_title: 'Behawiorysta | Szkolenie psów — Warszawa',
+                og_description: 'Wychowanie psa przez zrozumienie, a nie siłę.'
+            },
+
+            en: {
+                nav_brand: 'DOG<span class="text-gradient">COACH</span>',
+                nav_philosophy: 'My Approach',
+                nav_about: 'About Me',
+                nav_services: 'Services',
+                nav_reviews: 'Reviews',
+                nav_cta: 'Book Now',
+                fab_label: 'Leave a Request',
+
+                hero_badge: 'Dog Trainer • Behaviorist • Warsaw',
+                hero_title: '<span class="text-gradient">Raising a dog through understanding,</span> <br>not force.',
+                hero_desc: 'In practice I show dog owners how to build a relationship with their pet, correct behavior, and teach commands to progress to more advanced work. <br>I provide support to consolidate results.',
+                hero_cta_primary: 'Leave a Request',
+                hero_cta_secondary: 'See Services',
+                hero_image_alt: 'Dog Coach',
+
+                philosophy_tag: 'My Approach',
+                philosophy_title: '"IF YOU DIDN\'T TEACH IT — <span class="text-gradient">DON\'T DEMAND IT</span>"',
+                philosophy_desc: 'The main principle I always repeat and follow in life. Understanding it removes irritation, anger, and disappointment when interacting with your pet.',
+                philosophy_card1_title: 'TRAINING',
+                philosophy_card1_desc: 'You can teach only by example. First I teach the owner. You must be ready to learn and change yourself.',
+                philosophy_card2_title: 'ATTENTION TO DETAIL',
+                philosophy_card2_desc: 'Special focus on details and causes. They play the most important role in proper behavior correction.',
+                philosophy_card3_title: 'CALM',
+                philosophy_card3_desc: 'To achieve results, you need a system I share with you, consistency in actions, and self-discipline.',
+                philosophy_card4_title: 'LOVE AND FAITH',
+                philosophy_card4_desc: 'I believe in what I do and achieve results. I believe in your pets and do what I love.',
+
+                about_tag: 'About Me',
+                about_title: 'Engineer, Diplomat, <span class="text-gradient">Dog Trainer</span>',
+                about_path_title: 'My Path in Dog Training',
+                about_path_card1_title: 'The Beginning',
+                about_path_card1_desc: 'Since the age of 5 I have been passionate about raising and training dogs. It became a lifelong passion.',
+                about_path_card2_title: 'Professional Foundation',
+                about_path_card2_desc: 'For more than 5 years I trained intensively with professional dog trainer Natalia Valentinovna Kapustina.',
+                about_path_card3_title: 'Shows and Clubs',
+                about_path_card3_desc: 'Participation in the 1998 show. Member of the Belarusian Kynological Association “Alba Ross”, prepared dogs for competitions.',
+                about_path_card4_title: 'Antoine Nadjarian School',
+                about_path_card4_desc: 'Completed advanced training at the school of renowned dog behavior specialist Antoine Nadjarian.',
+                about_path_card5_title: 'Service Dog Training',
+                about_path_card5_desc: 'Successfully completed training at the National School of Service Dog Training of Ukraine.',
+                about_path_card6_title: 'Practice in Warsaw',
+                about_path_card6_desc: 'Officially working in Warsaw since 2023. I solve issues with aggression, anxiety, and complex cases.',
+                about_edu_title: 'Education and Management',
+                about_edu_card1_title: 'Engineering & Economics',
+                about_edu_card1_desc: 'Received a higher technical (engineering) degree. Completed a Master’s in “World Economy”.',
+                about_edu_card2_title: 'Management and Sales',
+                about_edu_card2_desc: 'Owned the marketing agency “EYVO”. Led sales in multinational companies, achieving results above planned and expected.',
+                about_edu_card3_title: 'CHOIX Project (ZOV)',
+                about_edu_card3_desc: 'Founded the furniture project “CHOIX”. Built retail sales at the “ZOV” factory for the first time in 20 years, proving the effectiveness of the developed business plan.',
+                about_edu_card4_title: 'Diplomacy',
+                about_edu_card4_desc: 'Completed a diplomacy course at the University of Warsaw. And I continue to learn further.',
+
+                services_tag: 'Price List',
+                services_title: 'Work Formats',
+
+                service01_title: 'Day with a trainer / intensive',
+                service01_price: '1500 zł',
+                service01_desc: 'Full immersion into the dog’s life.',
+                service01_list1: 'Behavior practice here and now.',
+                service01_list2: 'Travel up to 40 km included.',
+                service01_list3: 'One week of online support as a bonus.',
+                service01_list4: 'Prepayment: 500 zł.',
+                service01_cta: 'Choose Format',
+
+                service02_title: 'Puppy course up to 1 year + support',
+                service02_price: '2400 zł',
+                service02_desc: 'Basics, practice, field work, socialization.',
+                service02_list1: 'Course of 5 sessions (90+ min each).',
+                service02_list2: 'Includes 1 session in Corgi Club.',
+                service02_list3: 'Lifetime support.',
+                service02_list4: 'Prepayment: 100 zł.',
+                service02_cta: 'Choose Format',
+
+                service03_title: 'Offline session',
+                service03_price: '460 zł',
+                service03_desc: 'Training, behavior correction, aggression, fears.',
+                service03_list1: 'Session at your home or outside (up to 90 min).',
+                service03_list2: 'Days: Tue - Sat. Travel up to 25 km.',
+                service03_list3: '7 days of online support after.',
+                service03_list4: 'Prepayment: 100 zł.',
+                service03_cta: 'Choose Format',
+
+                service04_badge: 'URGENT',
+                service04_title: 'Urgent offline session',
+                service04_price: '600 zł',
+                service04_desc: 'Emergency visit within 48 hours.',
+                service04_list1: 'Solving acute problems.',
+                service04_list2: 'Any day of the week, up to 120 minutes.',
+                service04_list3: 'Travel up to 25 km included.',
+                service04_list4: 'Prepayment: 600 zł (full).',
+                service04_cta: 'Call Urgently',
+
+                service05_title: 'Online consultation',
+                service05_price: '360 zł',
+                service05_desc: 'Ideal if you are in another city or country.',
+                service05_list1: 'Problem analysis via video call (up to 90 min).',
+                service05_list2: 'You need an assistant with a phone.',
+                service05_list3: '*Urgent call (within 5h) — 460 zł.',
+                service05_list4: 'Prepayment: 100 zł.',
+                service05_cta: 'Choose Format',
+
+                service06_title: 'Online support 7 days',
+                service06_price: '360 zł',
+                service06_desc: '7 days of tasks, video reviews, and feedback.',
+                service06_list1: 'Great for socialization and basic commands.',
+                service06_list2: 'Not suitable for aggression and severe fears.',
+                service06_list3: 'Replies from 20:00 to 10:00 next day.',
+                service06_list4: 'Prepayment: 100 zł.',
+                service06_cta: 'Choose Format',
+
+                service07_title: 'Corgi Club (Warsaw)',
+                service07_price: '100 zł',
+                service07_desc1: 'I run group sessions on Saturdays in Warsaw “Corgi Club” for all breeds and ages.',
+                service07_desc2: 'We work on socialization, dog training, attention, and contact with the owner.',
+                service07_list1: 'Walk, focus on the owner',
+                service07_list2: 'Training ground, free off-leash',
+                service07_list3: 'Night club (calm reactions)',
+                service07_list4: 'Duration up to 90 min',
+                service07_cta: 'Join the Club',
+                service07_image_alt: 'Corgi Club',
+
+                service08_title: 'Gift for a child / certificate',
+                service08_price: '460 zł',
+                service08_desc: 'Teaching a child responsibility and relationships with a dog.',
+                service08_list1: 'Walk at least 120 min.',
+                service08_list2: 'I show by example with 1-2 of my dogs.',
+                service08_list3: 'Photos and video included.',
+                service08_cta: 'Buy',
+
+                service09_title: 'Command intensives',
+                service09_subtitle: 'Group format',
+                service09_price: '260 zł',
+                service09_desc: '7-day program. “Fast-track” format.',
+                service09_list1: 'Commands: Come, Heel, Place, Wait.',
+                service09_list2: 'Groups of 4-6 people.',
+                service09_list3: 'No homework by 22:00 — you’re out.',
+                service09_cta: 'Check Start',
+
+                service10_title: 'Overcoming fear of dogs',
+                service10_price: '1 zł',
+                service10_desc: 'My social contribution. Meeting with a safe dog.',
+                service10_list1: 'Step-by-step work through fear for children and adults.',
+                service10_list2: 'You will be able to pet and give commands.',
+                service10_cta: 'Message Me',
+
+                reviews_tag: 'Reviews',
+                reviews_title: 'Student Results',
+                review1_title: 'Solving fear problems',
+                review1_text: 'We came with a problem of constant fear of loud sounds on the street. Thanks to engineering precision and a structured system we found the cause. Now walks are enjoyable!',
+                review1_author: 'Ekaterina and Jack Russell Bonya',
+                review2_title: 'Socialization in Corgi Club',
+                review2_text: 'My dog used to rush at other dogs. Training at Corgi Club completely changed the situation. Great format where they work on contact and calm in a group.',
+                review2_author: 'Alexey and Corgi Martin',
+                review3_title: 'Right start for a puppy',
+                review3_text: 'We took the puppy course. Most of all we liked the principle “Didn’t teach — don’t demand.” First we learned, then the puppy. Very logical approach!',
+                review3_author: 'Maria and Labrador Ricky',
+
+                review_links_google: 'Reviews on Google Maps',
+                review_links_instagram: 'Student videos on Instagram',
+                review_links_podcast: 'Podcast about dogs with me',
+                review_links_tv: 'Me and my dog on TV',
+
+                contacts_back: 'Back',
+                contacts_tag: 'Contact Me',
+                contacts_title: 'Book a Session',
+                contacts_desc: 'Choose a convenient messenger. Describe the issue, the dog’s age and breed so we can select the ideal format of work.',
+                contacts_telegram: 'Message on Telegram',
+                contacts_instagram: 'Go to Instagram',
+                contacts_phone: 'Call: +48505706614',
+
+                footer_rights: '© 2026 Dog Coach Space. Warsaw. All rights reserved.',
+                footer_credit_label: 'Design and development:',
+                footer_credit_name: 'Vladislav Maloilo',
+
+                meta_title: 'Dog Trainer & Behaviorist — Warsaw',
+                meta_description: 'Raising a dog through understanding, not force.',
+                og_title: 'Dog Trainer & Behaviorist — Warsaw',
+                og_description: 'Raising a dog through understanding, not force.'
+            }
+        };
+
+        function setLanguage(lang) {
+            const safeLang = translations[lang] ? lang : 'ru';
+
+            document.querySelectorAll('[data-i18n]').forEach((el) => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[safeLang][key] !== undefined) {
+                    const attr = el.getAttribute('data-i18n-attr');
+                    if (attr) {
+                        el.setAttribute(attr, translations[safeLang][key]);
+                    } else {
+                        el.innerHTML = translations[safeLang][key];
+                    }
+                }
+            });
+
+            const url = new URL(window.location.href);
+            if (safeLang === 'ru') {
+                url.searchParams.delete('lang');
+            } else {
+                url.searchParams.set('lang', safeLang);
+            }
+            history.pushState({}, '', url);
+
+            document.querySelectorAll('.lang-switch').forEach((btn) => {
+                const isActive = btn.getAttribute('data-lang') === safeLang;
+                btn.classList.toggle('text-white', isActive);
+                btn.classList.toggle('text-brand-muted', !isActive);
+            });
+
+            document.title = translations[safeLang].meta_title;
+            document.documentElement.lang = safeLang;
+
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute('content', translations[safeLang].meta_description);
+
+            const ogTitle = document.querySelector('meta[property="og:title"]');
+            if (ogTitle) ogTitle.setAttribute('content', translations[safeLang].og_title);
+
+            const ogDesc = document.querySelector('meta[property="og:description"]');
+            if (ogDesc) ogDesc.setAttribute('content', translations[safeLang].og_description);
+
+            localStorage.setItem('lang', safeLang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlLang = new URL(window.location.href).searchParams.get('lang');
+            const storedLang = localStorage.getItem('lang');
+            const initialLang = (urlLang && translations[urlLang]) ? urlLang : (storedLang && translations[storedLang] ? storedLang : 'ru');
+
+            setLanguage(initialLang);
+
+            document.querySelectorAll('.lang-switch').forEach((btn) => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const lang = btn.getAttribute('data-lang');
+                    setLanguage(lang);
+                });
             });
         });
     </script>
