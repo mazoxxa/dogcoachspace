@@ -59,11 +59,23 @@
 
     <style>
         /* Базовые сбросы и настройки */
-        body {
+        html, body {
             background-color: #121212;
             color: #FFFFFF;
+            width: 100%;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+        }
+
+        /* Предотвращаем горизонтальный скролл на мобильных */
+        #app-container,
+        .spa-page {
+            overflow-x: hidden;
+        }
+
+        img,
+        svg {
+            max-width: 100%;
         }
 
         /* Утилита для градиентного текста */
