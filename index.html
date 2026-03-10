@@ -143,7 +143,7 @@
                 <a href="#reviews" class="hover:text-white transition-colors duration-300 ease-out btn-nav-link" data-i18n="nav_reviews">Отзывы</a>
             </div>
 
-            <div class="relative text-xs font-semibold text-brand-muted">
+            <div class="hidden md:flex relative items-center text-xs font-semibold text-brand-muted">
                 <button class="lang-trigger flex items-center gap-2 px-2.5 py-1.5 rounded-full border border-brand-border bg-transparent hover:text-white transition-colors duration-300 ease-out">
                     <span class="lang-trigger-text">🇷🇺 RU</span>
                 </button>
@@ -154,11 +154,43 @@
                 </div>
             </div>
 
-            <button class="btn-spa-contacts bg-gradient-brand text-[#121212] font-semibold px-6 py-2.5 rounded-full hover:shadow-[0_0_15px_rgba(229,115,16,0.4)] hover:scale-105 transition-all duration-300 ease-out" data-i18n="nav_cta">
+            <button class="btn-spa-contacts hidden md:block bg-gradient-brand text-[#121212] font-semibold px-6 py-2.5 rounded-full hover:shadow-[0_0_15px_rgba(229,115,16,0.4)] hover:scale-105 transition-all duration-300 ease-out" data-i18n="nav_cta">
                 Записаться
+            </button>
+
+            <button class="md:hidden p-2 rounded-full border border-brand-border text-white hover:text-brand-orange transition-colors duration-300 ease-out" aria-label="Открыть меню" aria-controls="mobile-menu" aria-expanded="false" data-mobile-open>
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/>
+                </svg>
             </button>
         </div>
     </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-[#121212] z-[100] flex flex-col translate-x-full transition-transform duration-300 ease-in-out md:hidden" aria-hidden="true">
+        <div class="flex items-center justify-end px-6 pt-6">
+            <button class="p-2 rounded-full border border-brand-border text-white hover:text-brand-orange transition-colors duration-300 ease-out" aria-label="Закрыть меню" data-mobile-close>
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M18 6l-12 12"/>
+                </svg>
+            </button>
+        </div>
+        <div class="flex-1 flex flex-col items-center justify-center gap-6 px-6 text-2xl font-semibold">
+            <a href="#philosophy" class="mobile-nav-link hover:text-brand-orange transition-colors duration-300 ease-out" data-i18n="nav_philosophy">Мой подход</a>
+            <a href="#about" class="mobile-nav-link hover:text-brand-orange transition-colors duration-300 ease-out" data-i18n="nav_about">Обо мне</a>
+            <a href="#services" class="mobile-nav-link hover:text-brand-orange transition-colors duration-300 ease-out" data-i18n="nav_services">Услуги</a>
+            <a href="#reviews" class="mobile-nav-link hover:text-brand-orange transition-colors duration-300 ease-out" data-i18n="nav_reviews">Отзывы</a>
+        </div>
+        <div class="mt-auto px-6 pb-8 flex flex-col gap-5">
+            <div class="flex items-center justify-center gap-2">
+                <button class="lang-switch lang-switch-mobile px-3 py-2 rounded-full border border-brand-border text-brand-muted text-sm font-semibold hover:text-white transition-colors duration-200" data-lang="ru">🇷🇺 RU</button>
+                <button class="lang-switch lang-switch-mobile px-3 py-2 rounded-full border border-brand-border text-brand-muted text-sm font-semibold hover:text-white transition-colors duration-200" data-lang="pl">🇵🇱 PL</button>
+                <button class="lang-switch lang-switch-mobile px-3 py-2 rounded-full border border-brand-border text-brand-muted text-sm font-semibold hover:text-white transition-colors duration-200" data-lang="en">🇬🇧 EN</button>
+            </div>
+            <button class="btn-spa-contacts mobile-menu-cta w-full bg-gradient-brand text-[#121212] font-semibold px-6 py-3 rounded-full hover:shadow-[0_0_15px_rgba(229,115,16,0.4)] transition-all duration-300 ease-out" data-i18n="nav_cta">
+                Записаться
+            </button>
+        </div>
+    </div>
 
     <div id="app-container" class="flex-grow flex flex-col pt-20 relative">
 
@@ -1337,6 +1369,13 @@
                 btn.classList.toggle('text-brand-muted', !isActive);
             });
 
+            document.querySelectorAll('.lang-switch-mobile').forEach((btn) => {
+                const isActive = btn.getAttribute('data-lang') === safeLang;
+                btn.classList.toggle('bg-brand-card', isActive);
+                btn.classList.toggle('border-brand-orange', isActive);
+                btn.classList.toggle('border-brand-border', !isActive);
+            });
+
             const triggerText = document.querySelector('.lang-trigger-text');
             if (triggerText) {
                 triggerText.textContent = `${flags[safeLang]} ${safeLang.toUpperCase()}`;
@@ -1370,6 +1409,30 @@
             const storedLang = localStorage.getItem('lang');
             const initialLang = (urlLang && translations[urlLang]) ? urlLang : (storedLang && translations[storedLang] ? storedLang : 'ru');
 
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuOpen = document.querySelector('[data-mobile-open]');
+            const mobileMenuClose = document.querySelector('[data-mobile-close]');
+
+            const openMobileMenu = () => {
+                if (!mobileMenu) return;
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('overflow-hidden');
+                if (mobileMenuOpen) {
+                    mobileMenuOpen.setAttribute('aria-expanded', 'true');
+                }
+            };
+
+            const closeMobileMenu = () => {
+                if (!mobileMenu) return;
+                mobileMenu.classList.add('translate-x-full');
+                mobileMenu.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('overflow-hidden');
+                if (mobileMenuOpen) {
+                    mobileMenuOpen.setAttribute('aria-expanded', 'false');
+                }
+            };
+
             setLanguage(initialLang);
 
             const langTrigger = document.querySelector('.lang-trigger');
@@ -1396,7 +1459,41 @@
                     e.preventDefault();
                     const lang = btn.getAttribute('data-lang');
                     setLanguage(lang);
+                    closeMobileMenu();
                 });
+            });
+
+            if (mobileMenuOpen) {
+                mobileMenuOpen.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openMobileMenu();
+                });
+            }
+
+            if (mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    closeMobileMenu();
+                });
+            }
+
+            document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+                link.addEventListener('click', () => {
+                    closeMobileMenu();
+                });
+            });
+
+            const mobileCta = document.querySelector('.mobile-menu-cta');
+            if (mobileCta) {
+                mobileCta.addEventListener('click', () => {
+                    closeMobileMenu();
+                });
+            }
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('translate-x-full')) {
+                    closeMobileMenu();
+                }
             });
         });
     </script>
